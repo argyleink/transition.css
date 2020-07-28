@@ -1,0 +1,12 @@
+@keyframes circle-in-bottom-left {
+  from {
+    clip-path: var(--circle-center-center-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-left-in);
+  }
+}
+
+[transition="in:circle:bottom-left"] {
+  animation-name: circle-in-bottom-left;
+}

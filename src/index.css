@@ -12,3 +12,6 @@
 
 @import "circles/out-bottom-right.css";
 @import "circles/in-top-left.css";
+@import "circles/in-top-right.css";
+@import "circles/in-bottom-left.css";
+@import "circles/in-bottom-right.css";
