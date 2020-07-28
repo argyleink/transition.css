@@ -1,0 +1,79 @@
+/* 
+(bundle from remote urls) 
+@import '//css-from-url';
+
+(bundle from npm)
+@import 'css-from-npm';
+
+(bundle from local)
+@import 'localfile.css' 
+
+(PresetENV)
+CSS powers @ https://preset-env.cssdb.org/features
+
+(Easings)
+only imports what you use 
+https://easings.net
+*/
+
+:root {
+  --surface: lch(10 0 0);
+  --text: lch(80 0 0);
+  --brand: lch(64 40 347);
+
+  @media (prefers-color-scheme: light) {
+    --surface: lch(98 0 0);
+    --text: lch(30 0 0);
+    --brand: lch(65 64 350)
+  }
+}
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui;
+  min-block-size: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body,p,ul,figure,
+h1,h2,h3,h4,h5,h6,small {
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--brand);
+}
+
+.hex {
+  max-width: 40vh;
+  fill: none;
+  stroke: var(--brand);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: .75rem;
+  cursor: crosshair;
+
+  & > polygon {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 1000;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    & > polygon {
+      transform-origin: center;
+      transition: stroke-dasharray 2s ease, transform 2s ease;
+      animation: animate-stroke 3s ease-out-expo forwards;
+    }
+
+    &:hover > polygon {
+      stroke-dasharray: 250;
+      transform: rotateZ(15deg);
+    }
+  }
+}
+
+@keyframes animate-stroke {
+  to { stroke-dashoffset: 0; }
+}
