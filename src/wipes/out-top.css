@@ -1,0 +1,13 @@
+@keyframes wipe-out-top {
+  from {
+    clip-path: var(--wipe-in);
+  }
+  to {
+    clip-path: var(--wipe-top);
+  }
+}
+
+[transition-out="wipe-top"],
+[transition-out="wipe-up"] {
+  animation-name: wipe-out-top;
+}

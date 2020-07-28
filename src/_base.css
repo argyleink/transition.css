@@ -1,11 +1,14 @@
-[transition] {
+[transition-in],
+[transition-out] {
   animation-delay: var(--transition__delay, 0);
   animation-duration: var(--transition__duration, 1s);
+  animation-timing-function: var(--transition__easing, ease-in-out);
   animation-fill-mode: both;
 }
 
 @media print, (prefers-reduced-motion: reduce) {
-  [transition] {
+  [transition-in],
+  [transition-out] {
     animation-duration: 1ms !important;
     transition-duration: 1ms !important;
     animation-iteration-count: 1 !important;

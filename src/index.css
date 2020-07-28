@@ -1,7 +1,11 @@
 @import "_vars";
 @import "_base";
 
-@import "wipes/wipe-top.css";
-@import "wipes/wipe-right.css";
-@import "wipes/wipe-bottom.css";
-@import "wipes/wipe-left.css";
+@import "wipes/out-top.css";
+@import "wipes/out-right.css";
+@import "wipes/out-bottom.css";
+@import "wipes/out-left.css";
+@import "wipes/in-top.css";
+@import "wipes/in-right.css";
+@import "wipes/in-bottom.css";
+@import "wipes/in-left.css";
