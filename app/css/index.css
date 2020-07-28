@@ -1,20 +1,4 @@
-/* 
-(bundle from remote urls) 
-@import '//css-from-url';
-
-(bundle from npm)
-@import 'css-from-npm';
-
-(bundle from local)
-@import 'localfile.css' 
-
-(PresetENV)
-CSS powers @ https://preset-env.cssdb.org/features
-
-(Easings)
-only imports what you use 
-https://easings.net
-*/
+@import "../../src/index.css";
 
 :root {
   --surface: lch(10 0 0);

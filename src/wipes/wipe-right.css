@@ -1,0 +1,12 @@
+@keyframes wipe-right {
+  from {
+    clip-path: var(--wipe-in);
+  }
+  to {
+    clip-path: var(--wipe-right);
+  }
+}
+
+[transition="wipe-right"] {
+  animation-name: wipe-right;
+}

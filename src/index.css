@@ -1,0 +1,7 @@
+@import "_vars";
+@import "_base";
+
+@import "wipes/wipe-top.css";
+@import "wipes/wipe-right.css";
+@import "wipes/wipe-bottom.css";
+@import "wipes/wipe-left.css";

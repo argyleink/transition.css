@@ -1,10 +1,10 @@
 {
-  "name": "shortstack",
-  "version": "1.1.6",
+  "name": "transition-css",
+  "version": "0.0.1",
   "author": "Adam Argyle",
-  "description": "rollup & postcss bundler starter",
+  "description": "just add water clip-path mask transitions",
   "license": "ISC",
-  "main": "index.js",
+  "style": "build/index.css",
   "browserslist": [
     "defaults"
   ],
