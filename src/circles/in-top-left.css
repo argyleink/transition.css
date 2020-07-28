@@ -1,0 +1,12 @@
+@keyframes circle-in-top-left {
+  from {
+    clip-path: var(--circle-center-center-out);
+  }
+  to {
+    clip-path: var(--circle-top-left-in);
+  }
+}
+
+[transition="in:circle:top-left"] {
+  animation-name: circle-in-top-left;
+}

@@ -7,7 +7,7 @@
   }
 }
 
-[transition-out="wipe-bottom"],
-[transition-out="wipe-down"] {
+[transition="out:wipe:bottom"],
+[transition="out:wipe:down"] {
   animation-name: wipe-out-bottom;
 }

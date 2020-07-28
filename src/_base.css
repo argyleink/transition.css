@@ -1,5 +1,4 @@
-[transition-in],
-[transition-out] {
+[transition] {
   animation-delay: var(--transition__delay, 0);
   animation-duration: var(--transition__duration, 1s);
   animation-timing-function: var(--transition__easing, ease-in-out);
@@ -7,8 +6,7 @@
 }
 
 @media print, (prefers-reduced-motion: reduce) {
-  [transition-in],
-  [transition-out] {
+  [transition] {
     animation-duration: 1ms !important;
     transition-duration: 1ms !important;
     animation-iteration-count: 1 !important;

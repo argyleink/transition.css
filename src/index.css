@@ -9,3 +9,6 @@
 @import "wipes/in-right.css";
 @import "wipes/in-bottom.css";
 @import "wipes/in-left.css";
+
+@import "circles/out-bottom-right.css";
+@import "circles/in-top-left.css";

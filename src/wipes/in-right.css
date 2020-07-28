@@ -1,4 +1,4 @@
-@keyframes wipe-out-right {
+@keyframes wipe-in-right {
   from {
     clip-path: var(--wipe-left);
   }
@@ -7,6 +7,6 @@
   }
 }
 
-[transition-in="wipe-right"] {
-  animation-name: wipe-out-right;
+[transition="in:wipe:right"] {
+  animation-name: wipe-in-right;
 }
