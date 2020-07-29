@@ -4,7 +4,7 @@ const cssnano       = require('cssnano')
 module.exports = {
   plugins: [
     postcssImport({
-      path: 'app/css',
+      path: 'src/index.css',
     }),
     cssnano({
       preset: 'default'
