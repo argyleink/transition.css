@@ -1,15 +1,15 @@
 @import "../../src/index.css";
 
 :root {
-  --surface: lch(10 0 0);
-  --surface2: lch(5 0 0);
+  --surface: lch(5 0 0);
   --text: lch(80 0 0);
-  --brand: lch(64 40 247);
+  --white: lch(95 10 250);
+  --brand: lch(64 30 247);
 
   @media (prefers-color-scheme: light) {
     --surface: lch(98 0 0);
-    --surface2: lch(100 0 0);
     --text: lch(30 0 0);
+    --white: lch(100 0 0);
     --brand: lch(65 64 250)
   }
 }
@@ -24,8 +24,12 @@ body {
   gap: 2ch;
 
   & > section {
+    background: var(--brand);
+    color: var(--white);
     flex: 2;
     inline-size: 100%;
+    max-block-size: 100vh;
+    overflow: hidden;
 
     display: grid;
     align-content: center;
@@ -48,7 +52,7 @@ header {
 }
 
 nav {
-  background: var(--surface2);
+  background: var(--surface);
   text-align: end;
   display: flex;
   gap: 1ch;
@@ -139,9 +143,6 @@ h1 {
   }
 
   & > span {
-    &:nth-child(1) {
-      color: var(--brand);
-    }
     &:nth-child(2) {
       color: deeppink;
     }
@@ -174,5 +175,5 @@ hr {
 svg {
   inline-size: 100%;
   max-block-size: 90vh;
-  fill: var(--brand);
+  fill: var(--white);
 }
