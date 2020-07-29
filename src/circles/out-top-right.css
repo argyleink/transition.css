@@ -1,0 +1,12 @@
+@keyframes circle-out-top-right {
+  from {
+    clip-path: var(--circle-center-center-in);
+  }
+  to {
+    clip-path: var(--circle-top-right-out);
+  }
+}
+
+[transition="out:circle:top-right"] {
+  animation-name: circle-out-top-right;
+}

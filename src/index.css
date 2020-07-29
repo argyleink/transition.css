@@ -10,6 +10,11 @@
 @import "wipes/in-bottom.css";
 @import "wipes/in-left.css";
 
+@import "circles/in-center.css";
+@import "circles/out-center.css";
+@import "circles/out-top-left.css";
+@import "circles/out-top-right.css";
+@import "circles/out-bottom-left.css";
 @import "circles/out-bottom-right.css";
 @import "circles/in-top-left.css";
 @import "circles/in-top-right.css";
