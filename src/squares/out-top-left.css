@@ -1,0 +1,12 @@
+@keyframes square-out-top-left {
+  from {
+    clip-path: var(--square-in);
+  }
+  to {
+    clip-path: var(--square-top-left-out);
+  }
+}
+
+[transition="out:square:top-left"] {
+  animation-name: square-out-top-left;
+}
