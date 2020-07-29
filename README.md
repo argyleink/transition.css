@@ -11,7 +11,7 @@
 
 
 #### Installation
-1. `npm i @argyleink/transition-css`
+1. `npm i transition-css`
 1. TODO: CDN `https://cdnjs.cloudflare.com/ajax/libs/transition.css/1.0.0/transition.min.css`
 
 #### Usage
