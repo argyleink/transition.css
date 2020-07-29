@@ -10,7 +10,7 @@
     <meta name="description" content="just add water clip-path mask transitions">
 
     <link rel="stylesheet" href="bundle.css">
-    <link rel="stylesheet" href="//unpkg.com/transition-style">
+    <!-- <link rel="stylesheet" href="//unpkg.com/transition-style"> -->
     <script src="bundle.js" type="module" defer></script>
   </head>
   <body>
@@ -47,6 +47,10 @@
         </optgroup>
         <optgroup label="Square Entrances">
           <option>in:square:center</option>
+          <option>in:square:top-right</option>
+          <option>in:square:top-left</option>
+          <option>in:square:bottom-right</option>
+          <option>in:square:bottom-left</option>
         </optgroup>
         <optgroup label="Square Exits">
           <option>out:square:center</option>
@@ -90,9 +94,17 @@
       <dl>
         <dt>Entrances</dt>
         <dd>in:square:center</dd>
+        <!-- <dd>in:square:top-right</dd>
+        <dd>in:square:top-left</dd>
+        <dd>in:square:bottom-right</dd>
+        <dd>in:square:bottom-left</dd> -->
 
         <dt>Exits</dt>
         <dd>out:square:center</dd>
+        <!-- <dd>out:square:top-right</dd>
+        <dd>out:square:top-left</dd> -->
+        <dd>out:square:bottom-right</dd>
+        <!-- <dd>out:square:bottom-left</dd> -->
       </dl>
 
       <h3>Wipes</h3>

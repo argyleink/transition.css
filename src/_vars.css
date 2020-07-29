@@ -21,8 +21,12 @@
   --wipe-right:  inset(0 0 0 100%);
   
   /*  SQUARES  */
-  --square-out: inset(100% 100% 100% 100%);
-  --square-in: var(--wipe-in);
+  --square-out:              inset(100% 100% 100% 100%);
+  --square-in:               var(--wipe-in);
+  --square-top-left-out:     inset(0 100% 100% 0);
+  --square-top-right-out:    inset(0 0 100% 100%);
+  --square-bottom-left-out:  inset(100% 100% 0 0);
+  --square-bottom-right-out: inset(100% 0 0 100%);
   
   /*  DIAMOND  */
   --diamond-out: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); 

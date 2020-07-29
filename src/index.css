@@ -23,6 +23,7 @@
 
 @import "squares/in-center.css";
 @import "squares/out-center.css";
+@import "squares/out-bottom-right.css";
 
 @import "polygons/diamond-in-center.css";
 @import "polygons/diamond-out-center.css";

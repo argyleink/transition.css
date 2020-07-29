@@ -1,0 +1,12 @@
+@keyframes square-out-bottom-right {
+  from {
+    clip-path: var(--square-in);
+  }
+  to {
+    clip-path: var(--square-bottom-right-out);
+  }
+}
+
+[transition="out:square:bottom-right"] {
+  animation-name: square-out-bottom-right;
+}
