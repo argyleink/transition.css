@@ -23,7 +23,7 @@ const copyToClipboard = text => {
   }
 }
 
-$('body').on('click', e => {
+$demo.on('click', e => {
   update(state.transition)
 })
 

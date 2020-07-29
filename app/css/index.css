@@ -67,6 +67,7 @@ nav {
   }
 
   @media (max-width: 720px) {
+    background: var(--brand);
     inline-size: 100%;
     place-content: center;
 
