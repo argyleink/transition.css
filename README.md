@@ -22,6 +22,9 @@ After `transition.css` has been added to your project, add an attribute to an el
 <div transition="in:circle:bottom-right">A transitioned element</div>
 ```
 
+#### Play
+Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb)
+
 <br><br>
 
 ## Development
