@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/argyleink/transition.css"
   },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/" 
+  },
   "keywords": [
     "css",
     "transitions",
