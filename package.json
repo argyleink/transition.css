@@ -1,9 +1,20 @@
 {
   "name": "transition-style",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Adam Argyle",
   "description": "just add water clip-path mask transitions",
   "license": "ISC",
+  "homepage": "https://transition.style",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/argyleink/transition.css"
+  },
+  "keywords": [
+    "css",
+    "transitions",
+    "animations",
+    "masking"
+  ],
   "main": "transition.min.css",
   "style": "transition.min.css",
   "browserslist": [
