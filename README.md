@@ -4,15 +4,16 @@
 </a>
 </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/59a03ed4-bf70-4441-b65c-200bcd61c013/deploy-status)](https://app.netlify.com/sites/shortstax/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status)](https://app.netlify.com/sites/transitions-css/deploys)
 
 ### Just-add-water CSS clip-path transitions
 
 
 
 #### Installation
-1. `npm i transition-style`
-1. TODO: CDN `https://cdnjs.cloudflare.com/ajax/libs/transition.css/1.0.0/transition.min.css`
+1. `npm i transition-style` & `@import 'transition-style'`
+OR
+1. Use a CDN `https://unpkg.com/transition-style`
 
 #### Usage
 After `transition.css` has been added to your project, add an attribute to an element:  
