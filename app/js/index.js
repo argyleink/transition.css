@@ -2,21 +2,15 @@ import $ from 'blingblingjs'
 
 const $demo = $('section')
 
-$('dd').on('click', e => {
-  let transition = e.target.textContent
+const state = {
+  transition: 'in:circle:top-left'
+}
+
+const update = transition => {
+  state.transition = transition
   $demo.attr('transition', transition)
   copyToClipboard(transition)
-})
-
-$('select').on('change', e => {
-  let transition = e.target.options[e.target.selectedIndex].text
-  $demo.attr('transition', transition)
-  copyToClipboard(transition)
-})
-
-$demo.on('animationend', e => {
-  $demo.attr('transition', '')
-})
+}
 
 const copyToClipboard = text => {
   if (!navigator.clipboard) return
@@ -28,3 +22,21 @@ const copyToClipboard = text => {
     console.error('Failed to copy: ', err)
   }
 }
+
+$('body').on('click', e => {
+  update(state.transition)
+})
+
+$('dd').on('click', e => {
+  let transition = e.target.textContent
+  update(transition)
+})
+
+$('select').on('change', e => {
+  let transition = e.target.options[e.target.selectedIndex].text
+  update(transition)
+})
+
+$demo.on('animationend', e => {
+  $demo.attr('transition', '')
+})
