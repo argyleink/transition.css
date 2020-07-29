@@ -30,3 +30,5 @@ Running `npm start` runs Browsersync, Rollup and Postcss concurrently, watching 
 Running `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready for static hosting.
 
 Running `npm run production` will build your project and start a server at `dist`.
+
+`npm run lib` to build the library files

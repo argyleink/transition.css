@@ -17,6 +17,7 @@
     "build:pre:css": "postcss app/css/index.css -o dist/bundle.css --env production",
     "build:post:copy": "cp app/index.html dist/index.html",
     "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
+    "lib": "postcss src/index.css -o transition.min.css --env production",
     "start": "concurrently --kill-others npm:dev:*",
     "production": "npm run build && npm run prod:server"
   },
