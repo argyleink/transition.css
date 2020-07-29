@@ -20,3 +20,6 @@
 @import "circles/in-top-right.css";
 @import "circles/in-bottom-left.css";
 @import "circles/in-bottom-right.css";
+
+@import "polygons/diamond-in-center.css";
+@import "polygons/diamond-out-center.css";
