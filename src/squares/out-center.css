@@ -1,0 +1,12 @@
+@keyframes square-out-center {
+  from {
+    clip-path: var(--square-in);
+  }
+  to {
+    clip-path: var(--square-out);
+  }
+}
+
+[transition="out:square:center"] {
+  animation-name: square-out-center;
+}

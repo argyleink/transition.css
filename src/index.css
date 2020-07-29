@@ -21,5 +21,8 @@
 @import "circles/in-bottom-left.css";
 @import "circles/in-bottom-right.css";
 
+@import "squares/in-center.css";
+@import "squares/out-center.css";
+
 @import "polygons/diamond-in-center.css";
 @import "polygons/diamond-out-center.css";
