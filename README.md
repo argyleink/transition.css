@@ -1,36 +1,25 @@
+<p align="center">
+<a href="https://transition.style" target="_blank">
+<img src="https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/transition-css-right.png" style="max-width: 480px; width: 100%; height: auto;" />
+</a>
+</p>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/59a03ed4-bf70-4441-b65c-200bcd61c013/deploy-status)](https://app.netlify.com/sites/shortstax/deploys)
 
-### CSS
-[PostCSS](https://postcss.org) to  **bundle**, **import from NPM, local or remote URLs**, handy [easings](https://easings.net), plus [postcss-preset-env](https://preset-env.cssdb.org/) for **latest CSS features**. 
+### Just-add-water CSS clip-path transitions
 
-### JS
-[Rollup](https://rollupjs.org) to **bundle**, **treeshake**, **import from NPM, local or remote URLs**, **import processed CSS**, plus [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env) for **latest JS features**. 
 
-### Servers
-[Browsersync](https://www.browsersync.io) with all the goodies for local dev: **live reload**, **hot swap CSS**, **scroll syncing**, **remote debugging**, [etc](https://www.browsersync.io). Prod server is just a static server.
 
-<br>
+#### Installation
+1. `npm i transition-css`
+1. TODO: CDN `https://cdnjs.cloudflare.com/ajax/libs/transition.css/1.0.0/transition.min.css`
 
-> Watch me break it down on [YouTube!](https://links.argyle.ink/shortstack)
+#### Usage
+After `transition.css` has been added to your project, add an attribute to an element:  
 
-<br><br>
-
-## Getting Started
-[use this as a Github template](https://github.com/argyleink/shortstack/generate)
-
-OR
-
-#### Clone Shortstack into a new folder
-1. `mkdir new-project-name && cd $_`
-1. `git clone --depth=1 https://github.com/argyleink/shortstack.git . && rm -rf ./.git`
-
-OR (essentially the same thing with npx+degit)
-
-1. `npx degit argyleink/shortstack#main`
-
-#### Install tools and spin it up
-1. `npm i`
-1. `npm start`
+```html
+<div transition="in:circle:bottom-right">A transitioned element</div>
+```
 
 <br><br>
 
