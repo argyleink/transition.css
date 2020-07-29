@@ -20,39 +20,64 @@ body {
   font-family: system-ui;
   min-block-size: 100vh;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 2ch;
 
   & > section {
     flex: 2;
+    width: 100%;
+
+    display: grid;
+    align-content: center;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
   }
 }
 
 header {
-  padding-inline-start: 5ch;
-  padding-block-start: 2ch;
+  @media (max-width: 720px) {
+    text-align: center;
+  }
+
+  @media (min-width: 720px) {
+    padding-inline-start: 5ch;
+    padding-block-start: 2ch;
+  }
 }
 
 nav {
   background: var(--surface2);
   text-align: end;
   display: flex;
-  flex-direction: column;
   gap: 1ch;
-  padding: 4ch 4ch 3ch 0;
+  padding: 3ch;
   box-sizing: border-box;
-  max-height: 100vh;
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
 
   & > h3 {
     color: var(--brand);
     font-size: 2.5rem;
     font-weight: lighter;
     text-decoration: underline;
+  }
 
-    &:not(:first-of-type) {
+  @media (max-width: 720px) {
+    width: 100%;
+    place-content: center;
+
+    & > *:not(select) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 720px) {
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 4ch 4ch 3ch 0;
+
+    & > h3:not(:first-of-type) {
       margin-block-start: 2ch;
     }
   }
@@ -79,6 +104,7 @@ dl {
     position: relative;
     font-size: 1.3rem;
     font-weight: 300;
+    white-space: nowrap;
 
     &:hover {
       color: var(--brand);
@@ -100,8 +126,22 @@ h1,h2,h3,h4,h5,h6,small {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: min(15vmin, 5rem);
   font-weight: 100;
+  display: flex;
+  justify-content: center;
+
+  & > span {
+    &:nth-child(1) {
+      color: var(--brand);
+    }
+    &:nth-child(2) {
+      color: deeppink;
+    }
+    &:nth-child(3) {
+      font-weight: bold;
+    }
+  }
 }
 
 ::selection {
@@ -121,6 +161,7 @@ hr {
   height: 1px;
   border-color: var(--surface);
   border-style: solid;
+  margin-block-end: 2ch;
 }
 
 svg {
