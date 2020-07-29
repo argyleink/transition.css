@@ -74,6 +74,12 @@ nav {
     & > *:not(select) {
       display: none;
     }
+
+    & > select {
+      font-size: 1.5rem;
+      border: none;
+      background: white;
+    }
   }
 
   @media (min-width: 720px) {
