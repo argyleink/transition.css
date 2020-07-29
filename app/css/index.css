@@ -23,6 +23,10 @@ body {
   gap: 2ch;
 }
 
+header {
+  text-align: end;
+}
+
 body,p,ul,figure,
 h1,h2,h3,h4,h5,h6,small {
   margin: 0;
@@ -33,7 +37,6 @@ h1,h2,h3,h4,h5,h6,small {
 }
 
 svg {
-  width: 100%;
-  max-width: 40vh;
+  width: 75vmin;
   fill: var(--brand);
 }
