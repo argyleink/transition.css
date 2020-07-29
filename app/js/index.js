@@ -1,15 +1,25 @@
-// (bundle from remote urls) 
-// import Whatever from 'https://unpkg.com/whatever'
+import $ from 'blingblingjs'
 
-// (bundle from npm)
-// import Whatever from 'whatever'
-// import $ from 'blingblingjs'
+const $demo = $('section')
+const $transitions = $('dd')
 
-// (bundle from local)
-// import whatever from './whatever.js'
+$transitions.on('click', e => {
+  let transition = e.target.textContent
+  $demo.attr('transition', transition)
+  copyToClipboard(transition)
+})
 
-// postCSS processed css-4-js
-// (file as string)
-// import { default as index_css }  from './css/index.css'
+$demo.on('animationend', e => {
+  $demo.attr('transition', '')
+})
 
-console?.log('💀')
+const copyToClipboard = text => {
+  if (!navigator.clipboard) return
+
+  try {
+    navigator.clipboard.writeText(text)
+  } 
+  catch (err) {
+    console.error('Failed to copy: ', err)
+  }
+}

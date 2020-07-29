@@ -1,6 +1,6 @@
 [transition] {
   animation-delay: var(--transition__delay, 0);
-  animation-duration: var(--transition__duration, 1s);
+  animation-duration: var(--transition__duration, 1.25s);
   animation-timing-function: var(--transition__easing, ease-in-out);
   animation-fill-mode: both;
 }

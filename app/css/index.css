@@ -2,13 +2,15 @@
 
 :root {
   --surface: lch(10 0 0);
+  --surface2: lch(5 0 0);
   --text: lch(80 0 0);
-  --brand: lch(64 40 347);
+  --brand: lch(64 40 247);
 
   @media (prefers-color-scheme: light) {
     --surface: lch(98 0 0);
+    --surface2: lch(100 0 0);
     --text: lch(30 0 0);
-    --brand: lch(65 64 350)
+    --brand: lch(65 64 250)
   }
 }
 
@@ -19,12 +21,77 @@ body {
   min-block-size: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2ch;
+
+  & > section {
+    flex: 2;
+  }
 }
 
 header {
+  padding-inline-start: 5ch;
+  padding-block-start: 2ch;
+}
+
+nav {
+  background: var(--surface2);
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  padding: 4ch 4ch 3ch 0;
+  box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+
+  & > h3 {
+    color: var(--brand);
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-decoration: underline;
+
+    &:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+  }
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1ch;
+
+  & > dt {
+    color: deeppink;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+  }
+
+  & > dd {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 300;
+
+    &:hover {
+      color: var(--brand);
+
+      &:after {
+        content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='deeppink' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
+        position: absolute;
+        inset: 1px 0 0 calc(100% + .5em);
+        height: .75em;
+        width: .75em;
+      }
+    }
+  }
 }
 
 body,p,ul,figure,
@@ -32,11 +99,31 @@ h1,h2,h3,h4,h5,h6,small {
   margin: 0;
 }
 
+h1 {
+  font-size: 5rem;
+  font-weight: 100;
+}
+
 ::selection {
   background-color: var(--brand);
 }
 
+a {
+  color: var(--text);
+
+  &:hover {
+    color: var(--brand);
+  }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border-color: var(--surface);
+  border-style: solid;
+}
+
 svg {
-  width: 75vmin;
+  width: 100%;
   fill: var(--brand);
 }
