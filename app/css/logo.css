@@ -1,7 +1,8 @@
 h1 {
-  font-size: min(15vmin, 5rem);
+  font-size: min(15vmin, 7rem);
   font-weight: 100;
   display: flex;
+  color: var(--white);
 
   @media (max-width: 720px) {
     justify-content: center;
@@ -9,10 +10,11 @@ h1 {
 
   & > span {
     &:nth-child(2) {
-      color: cyan;
+      color: deeppink;
     }
-    &:nth-child(1) {
+    &:nth-child(3) {
       font-weight: bold;
+      color: var(--brand-alt);
     }
   }
 }
@@ -28,7 +30,8 @@ header {
   }
 
   & > small {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 300;
+    color: var(--brand-alt);
   }
 }

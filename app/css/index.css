@@ -8,12 +8,13 @@
   --surface: lch(5 0 0);
   --text: lch(80 0 0);
   --white: lch(95 10 250);
-  --brand: lch(64 30 247);
+  --brand: lch(57 33 256);
+  --brand-alt: lch(95 10 250);
 
   @media (prefers-color-scheme: light) {
     --surface: lch(98 0 0);
     --text: lch(30 0 0);
     --white: lch(100 0 0);
-    --brand: lch(65 64 250)
+    --brand: lch(57 56 273)
   }
 }
