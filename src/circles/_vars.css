@@ -1,0 +1,14 @@
+:root {
+  --circle-center-center-out: circle(0%);
+  --circle-center-center-in:  circle(125%);
+  
+  --circle-top-left-out:      circle(0% at top left);
+  --circle-top-right-out:     circle(0% at top right);
+  --circle-bottom-right-out:  circle(0% at bottom right);
+  --circle-bottom-left-out:   circle(0% at bottom left);
+  
+  --circle-top-left-in:       circle(150% at top left);
+  --circle-top-right-in:      circle(150% at top right);
+  --circle-bottom-right-in:   circle(150% at bottom right);
+  --circle-bottom-left-in:    circle(150% at bottom left);
+}

@@ -1,0 +1,7 @@
+:root {
+  --wipe-in:     inset(0 0 0 0);
+  --wipe-bottom: inset(100% 0 0 0);
+  --wipe-left:   inset(0 100% 0 0);
+  --wipe-top:    inset(0 0 100% 0);
+  --wipe-right:  inset(0 0 0 100%);
+}

@@ -1,12 +1,13 @@
 @keyframes diamond-in-center {
   from {
-    clip-path: var(--diamond-out);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
   }
   to {
-    clip-path: var(--diamond-in);
+    clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
   }
 }
 
 [transition="in:diamond:center"] {
+  --transition__duration: 1.5s;
   animation-name: diamond-in-center;
 }

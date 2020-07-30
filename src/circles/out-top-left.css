@@ -8,5 +8,6 @@
 }
 
 [transition="out:circle:top-left"] {
+  --transition__duration: 1.5s;
   animation-name: circle-out-top-left;
 }

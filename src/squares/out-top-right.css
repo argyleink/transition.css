@@ -8,5 +8,6 @@
 }
 
 [transition="out:square:top-right"] {
+  --transition__duration: 1.5s;
   animation-name: square-out-top-right;
 }

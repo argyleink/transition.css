@@ -8,5 +8,6 @@
 }
 
 [transition="out:circle:bottom-left"] {
+  --transition__duration: 1.5s;
   animation-name: circle-out-bottom-left;
 }

@@ -1,36 +1,7 @@
 @import "_vars";
 @import "_base";
 
-@import "wipes/out-top.css";
-@import "wipes/out-right.css";
-@import "wipes/out-bottom.css";
-@import "wipes/out-left.css";
-@import "wipes/in-top.css";
-@import "wipes/in-right.css";
-@import "wipes/in-bottom.css";
-@import "wipes/in-left.css";
-
-@import "circles/in-center.css";
-@import "circles/out-center.css";
-@import "circles/out-top-left.css";
-@import "circles/out-top-right.css";
-@import "circles/out-bottom-left.css";
-@import "circles/out-bottom-right.css";
-@import "circles/in-top-left.css";
-@import "circles/in-top-right.css";
-@import "circles/in-bottom-left.css";
-@import "circles/in-bottom-right.css";
-
-@import "squares/in-center.css";
-@import "squares/out-center.css";
-@import "squares/out-top-left.css";
-@import "squares/out-top-right.css";
-@import "squares/out-bottom-left.css";
-@import "squares/out-bottom-right.css";
-@import "squares/in-top-left.css";
-@import "squares/in-top-right.css";
-@import "squares/in-bottom-left.css";
-@import "squares/in-bottom-right.css";
-
-@import "polygons/diamond-in-center.css";
-@import "polygons/diamond-out-center.css";
+@import "wipes/";
+@import "circles/";
+@import "squares/";
+@import "polygons/";
