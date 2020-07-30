@@ -86,7 +86,6 @@ nav {
     flex-direction: column;
     max-block-size: 100vh;
     overflow-y: auto;
-    padding: 4ch 4ch 3ch 0;
 
     & > select {
       display: none;
@@ -120,6 +119,7 @@ dl {
     font-size: 1.3rem;
     font-weight: 300;
     white-space: nowrap;
+    margin: 0;
 
     & > a {
       padding-block: .5ex;
