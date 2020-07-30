@@ -1,0 +1,100 @@
+nav {
+  background: var(--surface);
+  text-align: end;
+  display: flex;
+  gap: 1ch;
+  padding: 3ch;
+  box-sizing: border-box;
+
+  & > h3 {
+    color: var(--brand);
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: var(--white);
+  }
+
+  @media (max-width: 720px) {
+    background: var(--brand);
+    inline-size: 100%;
+    place-content: center;
+
+    & > *:not(select) {
+      display: none;
+    }
+
+    & > select {
+      font-size: 1.25rem;
+      border: none;
+      background: var(--white);
+    }
+  }
+
+  @media (min-width: 720px) {
+    flex-direction: column;
+    max-block-size: 100vh;
+    overflow-y: auto;
+
+    & > select {
+      display: none;
+    }
+
+    & > h3:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+  }
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1ex;
+
+  & > dt {
+    color: deeppink;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+  }
+
+  & > dd {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 300;
+    white-space: nowrap;
+    margin: 0;
+
+    & > a {
+      padding-block: .5ex;
+    }
+
+    & > a:hover {
+      color: var(--brand);
+    }
+
+    & > a:focus {
+      outline: 1px dotted deeppink;
+    }
+
+    &:matches(:hover,:focus-within)::after {
+      content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='deeppink' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
+      position: absolute;
+      inset: 1px 0 0 calc(100% + .5em);
+      block-size: .75em;
+      inline-size: .75em;
+    }
+
+    &[selected] > a {
+      text-decoration-color: deeppink;
+    }
+
+    &:not([selected]) > a {
+      text-decoration: none;
+    }
+  }
+}

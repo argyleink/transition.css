@@ -1,0 +1,55 @@
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui;
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  & > section {
+    background: var(--brand);
+    color: var(--white);
+    flex: 2;
+    inline-size: 100%;
+    max-block-size: 100vh;
+    overflow: hidden;
+
+    display: grid;
+    place-content: center;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+}
+
+body,p,ul,figure,
+h1,h2,h3,h4,h5,h6,small {
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--brand);
+}
+
+a {
+  color: var(--text);
+
+  &:hover {
+    color: var(--brand);
+  }
+}
+
+hr {
+  inline-size: 100%;
+  block-size: 1px;
+  border-color: var(--surface);
+  border-style: solid;
+  margin-block-end: 2ch;
+}
+
+svg {
+  inline-size: 100%;
+  max-block-size: 90vh;
+  fill: var(--white);
+}

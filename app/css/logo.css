@@ -1,0 +1,34 @@
+h1 {
+  font-size: min(15vmin, 5rem);
+  font-weight: 100;
+  display: flex;
+
+  @media (max-width: 720px) {
+    justify-content: center;
+  }
+
+  & > span {
+    &:nth-child(2) {
+      color: cyan;
+    }
+    &:nth-child(1) {
+      font-weight: bold;
+    }
+  }
+}
+
+header {
+  @media (max-width: 720px) {
+    text-align: center;
+  }
+
+  @media (min-width: 720px) {
+    padding-inline-start: 5ch;
+    padding-block-start: 2ch;
+  }
+
+  & > small {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
