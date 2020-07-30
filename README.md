@@ -14,12 +14,24 @@
 1. `npm i transition-style` & `@import 'transition-style'`
 OR
 1. Use a CDN `https://unpkg.com/transition-style`
+OR
+1. Grab individual categories
+  - `https://unpkg.com/transition-style/transition.circles.min.css`
+  - `https://unpkg.com/transition-style/transition.squares.min.css`
+  - `https://unpkg.com/transition-style/transition.polygons.min.css`
+  - `https://unpkg.com/transition-style/transition.wipes.min.css`
 
 #### Usage
 After `transition.css` has been added to your project, add an attribute to an element:  
 
 ```html
-<div transition="in:circle:bottom-right">A transitioned element</div>
+<div transition="in:circle:bottom-right">
+  A transitioned IN element
+</div>
+
+<div transition="out:wipe:down">
+  A transitioned OUT element
+</div>
 ```
 
 #### Play
