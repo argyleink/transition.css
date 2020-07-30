@@ -1,9 +1,2 @@
-@import "out-top.css";
-@import "out-right.css";
-@import "out-bottom.css";
-@import "out-left.css";
-
-@import "in-top.css";
-@import "in-right.css";
-@import "in-bottom.css";
-@import "in-left.css";
+@import "../_base.css";
+@import "_includes.css";

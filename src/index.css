@@ -1,7 +1,7 @@
 @import "_vars";
 @import "_base";
 
-@import "wipes/";
-@import "circles/";
-@import "squares/";
-@import "polygons/";
+@import "wipes/_includes.css";
+@import "circles/_includes.css";
+@import "squares/_includes.css";
+@import "polygons/_includes.css";

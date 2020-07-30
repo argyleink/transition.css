@@ -29,8 +29,13 @@
     "build:pre:css": "postcss app/css/index.css -o dist/bundle.css --env production",
     "build:post:copy": "cp app/index.html dist/index.html",
     "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
-    "lib": "postcss src/index.css -c src -o transition.min.css --env production",
+    "lib:all": "postcss src/index.css -c src -o transition.min.css",
+    "lib:wipes": "postcss src/wipes/index.css -c src -o transition.wipes.min.css",
+    "lib:circles": "postcss src/circles/index.css -c src -o transition.circles.min.css",
+    "lib:squares": "postcss src/squares/index.css -c src -o transition.squares.min.css",
+    "lib:polygons": "postcss src/polygons/index.css -c src -o transition.polygons.min.css",
     "start": "concurrently --kill-others npm:dev:*",
+    "bundle": "concurrently --kill-others npm:lib:*",
     "production": "npm run build && npm run prod:server"
   },
   "devDependencies": {

@@ -1,4 +1,2 @@
-@import "opposing-corners-in.css";
-@import "opposing-corners-out.css";
-@import "diamond-in-center.css";
-@import "diamond-out-center.css";
+@import "../_base.css";
+@import "_includes.css";
