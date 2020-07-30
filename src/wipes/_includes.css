@@ -7,3 +7,13 @@
 @import "in-right.css";
 @import "in-bottom.css";
 @import "in-left.css";
+
+@import "in-top-right.css";
+@import "in-top-left.css";
+@import "in-bottom-right.css";
+@import "in-bottom-left.css";
+
+@import "out-top-right.css";
+@import "out-top-left.css";
+@import "out-bottom-right.css";
+@import "out-bottom-left.css";

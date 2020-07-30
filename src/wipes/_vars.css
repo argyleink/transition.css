@@ -4,4 +4,14 @@
   --wipe-left:   inset(0 100% 0 0);
   --wipe-top:    inset(0 0 100% 0);
   --wipe-right:  inset(0 0 0 100%);
+
+  --wipe-top-left-in: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  --wipe-top-right-in: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  --wipe-bottom-left-in: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  --wipe-bottom-right-in: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+
+  --wipe-top-left-out: polygon(0 0, 0 0, 0 0, 0 50%);
+  --wipe-top-right-out: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+  --wipe-bottom-left-out: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
+  --wipe-bottom-right-out: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
 }

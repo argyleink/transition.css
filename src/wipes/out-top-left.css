@@ -1,0 +1,12 @@
+@keyframes wipe-out-top-left {
+  from {
+    clip-path: var(--wipe-bottom-right-in);
+  }
+  to {
+    clip-path: var(--wipe-top-left-out);
+  }
+}
+
+[transition="out:wipe:top-left"] {
+  animation-name: wipe-out-top-left;
+}
