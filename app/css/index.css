@@ -21,7 +21,6 @@ body {
   min-block-size: 100vh;
   display: flex;
   justify-content: space-between;
-  gap: 2ch;
 
   & > section {
     background: var(--brand);
@@ -32,12 +31,11 @@ body {
     overflow: hidden;
 
     display: grid;
-    align-content: center;
+    place-content: center;
   }
 
   @media (max-width: 720px) {
     flex-direction: column;
-    gap: 0;
   }
 }
 
@@ -78,7 +76,7 @@ nav {
     }
 
     & > select {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       border: none;
       background: var(--white);
     }
