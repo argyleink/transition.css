@@ -11,15 +11,20 @@
 
 
 #### Installation
-1. `npm i transition-style` & `@import 'transition-style'`
-OR
-1. Use a CDN `https://unpkg.com/transition-style`
-OR
-1. Grab individual categories
+**NPM**  
+1. `npm i transition-style` 
+2. `@import "transition-style";` in your CSS or `import 'transition-style';` in your Javascript 
+
+**CDN**  
+Latest at `https://unpkg.com/transition-style`  
+  
+Or go minimal, import individual category bundles
   - `https://unpkg.com/transition-style/transition.circles.min.css`
   - `https://unpkg.com/transition-style/transition.squares.min.css`
   - `https://unpkg.com/transition-style/transition.polygons.min.css`
   - `https://unpkg.com/transition-style/transition.wipes.min.css`
+  
+<br><br>
 
 #### Usage
 After `transition.css` has been added to your project, add an attribute to an element:  
