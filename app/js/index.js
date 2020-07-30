@@ -13,7 +13,6 @@ const state = {
 const update = transition => {
   state.transition = transition
   $demo.attr('transition', transition)
-  copyToClipboard(transition)
 }
 
 const copyToClipboard = text => {
@@ -39,6 +38,7 @@ $('dd').on('click', e => {
   state.selected = e.currentTarget
 
   update(transition)
+  copyToClipboard(transition)
 })
 
 $('select').on('change', e => {
