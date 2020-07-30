@@ -2,8 +2,12 @@ import $ from 'blingblingjs'
 
 const $demo = $('section')
 
+const [selected] = $('dd').filter(d => 
+  d.textContent === 'in:circle:top-left')
+
 const state = {
-  transition: 'in:circle:top-left'
+  transition: 'in:circle:top-left',
+  selected,
 }
 
 const update = transition => {
@@ -28,7 +32,12 @@ $demo.on('click', e => {
 })
 
 $('dd').on('click', e => {
-  let transition = e.target.textContent
+  let transition = e.currentTarget.textContent
+
+  state.selected.removeAttribute('selected')
+  e.currentTarget.setAttribute('selected', true)
+  state.selected = e.currentTarget
+
   update(transition)
 })
 
