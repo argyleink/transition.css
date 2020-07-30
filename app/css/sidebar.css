@@ -12,6 +12,10 @@ nav {
     font-weight: lighter;
     text-decoration: underline;
     text-decoration-color: var(--white);
+
+    @media (prefers-color-scheme: light) {
+      text-decoration-color: hsl(208deg 55% 75%);
+    }
   }
 
   @media (max-width: 720px) {

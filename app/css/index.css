@@ -2,7 +2,7 @@
 
 @import "generic.css";
 @import "logo.css";
-@import "features.css";
+@import "sidebar.css";
 
 :root {
   --surface: lch(5 0 0);
@@ -12,7 +12,7 @@
   --brand-alt: lch(95 10 250);
 
   @media (prefers-color-scheme: light) {
-    --surface: lch(98 0 0);
+    --surface: white;
     --text: lch(30 0 0);
     --white: lch(100 0 0);
     --brand: lch(57 56 273)
