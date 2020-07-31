@@ -1,10 +1,15 @@
-<p align="center">
+<p style="text-align:center">
 <a href="https://transition.style" target="_blank">
 <img src="https://github.com/argyleink/transition.css/blob/main/app/logo.gif?raw=true" />
 </a>
 </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status)](https://app.netlify.com/sites/transitions-css/deploys)
+<p style="text-align='center'">
+  <img src="https://img.shields.io/npm/dt/transition.css.svg" alt="Total Downloads">
+  <img src="https://img.shields.io/npm/v/transition.css.svg" alt="Latest Release">
+  <img src="https://img.shields.io/npm/l/transition.css.svg" alt="License">
+  <img src="https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status" alt="Netlify Status">
+</p>
 
 ### Just-add-water CSS clip-path transitions
 
@@ -16,24 +21,24 @@
 2. `@import "transition-style";` in your CSS or `import 'transition-style';` in your Javascript 
 
 **CDN**  
-Latest at `https://unpkg.com/transition-style`  
+**Latest** at `https://unpkg.com/transition-style`  
   
-Or import individual category bundles
+Or import **individual category bundles**
   - `https://unpkg.com/transition-style/transition.circles.min.css`
   - `https://unpkg.com/transition-style/transition.squares.min.css`
   - `https://unpkg.com/transition-style/transition.polygons.min.css`
   - `https://unpkg.com/transition-style/transition.wipes.min.css`
 
-Or go slim & custom -> import the `hackpack`
+Or go a **slim & custom** route by importing the `hackpack`
   - `https://unpkg.com/transition-style/transition.hackpack.min.css`
-  - Create a custom `@keyframe` animation with the imported custom properties. 
+  - Create a [custom](#custom) `@keyframe` animation with the imported custom properties. 
 
-> Custom properties ship with the `transition.min.css` as well.
+> Custom properties ship with each `.min.css` as well
   
 <br><br>
 
 #### Usage
-After `transition.css` has been added to your project, add an attribute to an element:  
+After `transition.css` has been added to your project, add an attribute to an element and watch the magic:  
 
 ```html
 <div transition="in:circle:bottom-right">
@@ -44,6 +49,10 @@ After `transition.css` has been added to your project, add an attribute to an el
   A transitioned OUT element
 </div>
 ```
+
+> if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
+
+<br><br>
 
 #### Custom
 Go off the rails and build your own transitions with the custom props that ship with the each bundle. There's even the `hackpack` which is exclusively the custom props 🤘💀
@@ -74,7 +83,9 @@ Then, in the HTML:
 </div>
 ```
 
-- The only rule is that you must transition from the same type of shapes
+> The only rule is that you must transition from the same type of shapes
+
+<br><br>
 
 #### Play
 Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb)
