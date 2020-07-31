@@ -13,3 +13,4 @@ The transitions in transition.css should follow a few key principles:
 - **Transitions should be helpful.** They should be designed to move users through moments of interest, ease natural reading order, or to communicate relationships between spaces.
 - **Transitions should feel familial.** Avoid introducing transitions that feel out-of-place compared to the existing set.
 - **Transitions should feel natural.** Transitions should reflect, as much as is reasonable, motion that occurs in natural physics. Avoid extreme timing functions, and model transitions on real-world events.
+- **Transitions shouldn't run on devices without the power to do so.** If a device is contrained in battery, memory, GPU, etc, then it's a good idea to avoid transitions. 
