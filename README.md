@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://transition.style" target="_blank">
-<img src="https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/transition-css-right.png" style="max-width: 480px; width: 100%; height: auto;" />
+<img src="https://github.com/argyleink/transition.css/blob/main/app/logo.gif?raw=true" />
 </a>
 </p>
 
