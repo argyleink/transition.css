@@ -20,6 +20,8 @@
 1. `npm i transition-style` 
 2. `@import "transition-style";` in your CSS or `import 'transition-style';` in your Javascript 
 
+<br>
+
 **CDN**  
 **Latest** at `https://unpkg.com/transition-style`  
   
@@ -31,7 +33,7 @@ Or import **individual category bundles**
 
 Or go a **slim & custom** route by importing the `hackpack`
   - `https://unpkg.com/transition-style/transition.hackpack.min.css`
-  - Create a [custom](#custom) `@keyframe` animation with the imported custom properties. 
+  - It's just the custom props. Build [custom](#custom) `@keyframe` animations with them. 
 
 > Custom properties ship with each `.min.css` as well
   
@@ -51,6 +53,8 @@ After `transition.css` has been added to your project, add an attribute to an el
 ```
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
+
+Transition.css is very similar to [animate.css](https://animate.style). The docs they've made are excellent and show many examples of advanced usage of libraries like this. You'll notice `transition.css` is very inspired by `animate.css`.
 
 <br><br>
 
@@ -84,8 +88,6 @@ Then, in the HTML:
 ```
 
 > The only rule is that you must transition from the same type of shapes
-
-<br><br>
 
 #### Play
 Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb)
