@@ -18,11 +18,17 @@
 **CDN**  
 Latest at `https://unpkg.com/transition-style`  
   
-Or go minimal, import individual category bundles
+Or import individual category bundles
   - `https://unpkg.com/transition-style/transition.circles.min.css`
   - `https://unpkg.com/transition-style/transition.squares.min.css`
   - `https://unpkg.com/transition-style/transition.polygons.min.css`
   - `https://unpkg.com/transition-style/transition.wipes.min.css`
+
+Or go slim & custom -> import the `hackpack`
+  - `https://unpkg.com/transition-style/transition.hackpack.min.css`
+  - Create a custom `@keyframe` animation with the imported custom properties. 
+
+> Custom properties ship with the `transition.min.css` as well.
   
 <br><br>
 
@@ -38,6 +44,37 @@ After `transition.css` has been added to your project, add an attribute to an el
   A transitioned OUT element
 </div>
 ```
+
+#### Custom
+Go off the rails and build your own transitions with the custom props that ship with the each bundle. There's even the `hackpack` which is exclusively the custom props 🤘💀
+
+Most of the built in transitions are from the center. Here's how you can set the `from` transition to somewhere custom. This is also the animation used on page load for [transition.style](https://transition.style).
+
+```css
+@keyframes circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition="in:custom:circle-swoop"] {
+  --transition__duration: 1s;
+  animation-name: circle-swoop;
+}
+```
+
+Then, in the HTML:
+
+```html
+<div transition="in:custom:circle-swoop">
+  A custom transitioned element
+</div>
+```
+
+- The only rule is that you must transition from the same type of shapes
 
 #### Play
 Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb)

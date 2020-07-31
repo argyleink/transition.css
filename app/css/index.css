@@ -18,3 +18,17 @@
     --brand: lch(57 56 273)
   }
 }
+
+@keyframes circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition="in:custom:circle-swoop"] {
+  --transition__duration: 5s;
+  animation-name: circle-swoop;
+}
