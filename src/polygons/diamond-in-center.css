@@ -1,9 +1,9 @@
 @keyframes diamond-in-center {
   from {
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    clip-path: var(--diamond-center-out);
   }
   to {
-    clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+    clip-path: var(--diamond-center-in);
   }
 }
 
