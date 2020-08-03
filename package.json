@@ -30,7 +30,7 @@
     "start": "cd svelte-docsite && npm i && npm run dev",
     "bundle": "concurrently --kill-others npm:lib:*",
     "dev": "cd svelte-docsite && npm run dev",
-    "build": "cd svelte-docsite && npm run build"
+    "build": "cd svelte-docsite && npm i  && npm run build"
   },
   "devDependencies": {
     "concurrently": "5.2.0",
