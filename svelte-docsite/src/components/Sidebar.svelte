@@ -3,11 +3,11 @@
   import {transition, duration, easing} from '../store.js'
 
   const easings = [
-    'cubic-bezier(.25, 1, .30, 1)',
     'ease-in',
     'ease-out',
     'ease-in-out',
     'linear',
+    'cubic-bezier(.25, 1, .30, 1)',
   ]
 
   function transitionClick(e) {
@@ -41,17 +41,17 @@
   </select>
 
   <h3>Settings</h3>
-  <h4>Duration:</h4>
+  <h4>--transition__duration:</h4>
   <select bind:value={$duration}>
-    {#each [0.5,0.75,1,2,3,4,5,6,7,10] as time}
-      <option selected={time === duration} value={time}>{time}s</option>  
+    {#each [0.5,0.75,1,1.5,2,2.5,3,4,5,6,7,10] as time}
+      <option value={time}>{time}s</option>  
     {/each}
   </select>
 
-  <h4>Easing:</h4>
+  <h4>--transition__easing:</h4>
   <select bind:value={$easing}>
     {#each easings as ez}
-      <option selected={ez === duration} value={ez}>{ez}</option>  
+      <option value={ez}>{ez}</option>  
     {/each}
   </select>
 

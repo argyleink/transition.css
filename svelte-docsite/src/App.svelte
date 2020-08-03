@@ -13,9 +13,6 @@
 		active_transition = txn
 	})
 
-	duration.subscribe(dur => speed = dur)
-	// easing.subscribe(ez => ease = ez)
-
 	function demoClick() {
 		active_transition = last_chosen
 	}
@@ -36,7 +33,7 @@
 	on:animationend={transitionFinished}
 	style="
 	  --transition__duration: {$duration}s;
-	  --transition__easing: {$ease}s;
+	  --transition__easing: {$ease};
 	"
 >
   <Logo/>
