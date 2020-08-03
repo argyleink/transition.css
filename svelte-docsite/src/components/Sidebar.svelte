@@ -4,6 +4,18 @@
 
   function transitionClick(e) {
     $transition = e.currentTarget.textContent
+    copyToClipboard($transition)
+  }
+
+  function copyToClipboard(text) {
+    if (!navigator.clipboard) return
+
+    try {
+      navigator.clipboard.writeText(text)
+    } 
+    catch (err) {
+      console.error('Failed to copy: ', err)
+    }
   }
 </script>
 
@@ -131,7 +143,7 @@
     outline: 1px dotted deeppink;
   }
 
-  
+
 
   @media (max-width: 720px) {
     nav {
