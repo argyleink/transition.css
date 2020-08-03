@@ -21,46 +21,24 @@
     "defaults"
   ],
   "scripts": {
-    "dev:js": "rollup -c -w",
-    "dev:css": "postcss app/css/index.css -o app/bundle.css -w",
-    "dev:server": "browser-sync app --files \"app/**/*, !app/css/**, !app/js/**\" --no-open --no-notify",
-    "prod:server": "browser-sync dist --no-open --no-notify --no-ghost-mode",
-    "build:pre:js": "rollup -c --environment NODE_ENV:production",
-    "build:pre:css": "postcss app/css/index.css -o dist/bundle.css --env production",
-    "build:post:copy": "cp app/index.html dist/index.html",
-    "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
     "lib:all": "postcss src/index.css -c src -o transition.min.css",
     "lib:wipes": "postcss src/wipes/index.css -c src -o transition.wipes.min.css",
     "lib:circles": "postcss src/circles/index.css -c src -o transition.circles.min.css",
     "lib:squares": "postcss src/squares/index.css -c src -o transition.squares.min.css",
     "lib:polygons": "postcss src/polygons/index.css -c src -o transition.polygons.min.css",
     "lib:hackpack": "postcss src/hackpack.css -c src -o transition.hackpack.min.css",
-    "start": "concurrently --kill-others npm:dev:*",
+    "start": "cd svelte-docsite && npm i && npm run dev",
     "bundle": "concurrently --kill-others npm:lib:*",
-    "production": "npm run build && npm run prod:server"
+    "dev": "cd svelte-docsite && npm run dev",
+    "build": "cd svelte-docsite && npm run build"
   },
   "devDependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "0.25.2",
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "browser-sync": "^2.26.12",
     "concurrently": "5.2.0",
     "cssnano": "^4.1.10",
-    "import-http": "^0.3.1",
     "postcss": "7.0.31",
     "postcss-cli": "7.1.1",
     "postcss-easings": "^2.0.0",
     "postcss-import": "^12.0.1",
-    "postcss-import-url": "^5.1.0",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "6.7.0",
-    "rollup": "2.12.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-postcss": "^3.1.1",
-    "rollup-plugin-terser": "^6.1.0"
-  },
-  "dependencies": {
-    "blingblingjs": "^2.1.1"
+    "postcss-loader": "^3.0.0"
   }
 }

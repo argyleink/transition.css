@@ -1,20 +1,19 @@
 <script>
   import transitions from '../transitions.js'
-
-  export let selected = 'in:custom:circle-swoop'
+  import {transition} from '../store.js'
 
   function transitionClick(e) {
-    selected = e.currentTarget.textContent
+    $transition = e.currentTarget.textContent
   }
 </script>
 
 <nav>
-  <select bind:value={selected}>
+  <select bind:value={$transition}>
     {#each Object.entries(transitions) as [title, groupedByShape]}
       {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
         <optgroup label="{title} {direction}">
-        {#each groupedByDirection as transition}
-          <option>{transition}</option>
+        {#each groupedByDirection as txn}
+          <option>{txn}</option>
         {/each}
         </optgroup>
       {/each}
@@ -26,9 +25,9 @@
     <dl>
       {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
         <dt>{direction}</dt>
-        {#each groupedByDirection as transition}
-          <dd selected={transition === selected}>
-            <a href="#{transition}" on:click={transitionClick}>{transition}</a>
+        {#each groupedByDirection as txn}
+          <dd selected={txn === transition}>
+            <a href="#{txn}" on:click={transitionClick}>{txn}</a>
           </dd>
         {/each}
       {/each}

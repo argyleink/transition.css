@@ -1,17 +1,22 @@
 <script>
 	import Logo from './components/Logo.svelte'
 	import Sidebar from './components/Sidebar.svelte'
+	import {transition} from './store.js'
 
-	let transition = location.hash !== ''
-		? location.hash.slice(1)
-		: 'in:custom:circle-swoop'
+	let active_transition = transition
+	let last_chosen = transition
 
-	function demoClick(e) {
-		console.log('todo')
+	transition.subscribe(txn => {
+		last_chosen = txn
+		active_transition = txn
+	})
+
+	function demoClick() {
+		active_transition = last_chosen
 	}
 
-	function transitionFinished(e) {
-		transition = ''
+	function transitionFinished() {
+		active_transition = ''
 	}
 </script>
 
@@ -21,7 +26,7 @@
   <meta name="description" content="just add water clip-path mask transitions">
 </svelte:head>
 
-<section transition="{transition}" 
+<section transition="{active_transition}" 
 	on:click={demoClick}
 	on:animationend={transitionFinished}
 >
