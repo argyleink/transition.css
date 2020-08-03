@@ -1,65 +1,34 @@
 <script>
-	import transitions from './transitions.js'
-	export let transition = 'in:custom:circle-swoop'
+	import Logo from './components/Logo.svelte'
+	import Sidebar from './components/Sidebar.svelte'
 
-	if (location.hash !== '')
-		transition = location.hash.slice(1)
+	let transition = location.hash !== ''
+		? location.hash.slice(1)
+		: 'in:custom:circle-swoop'
 
-	function transitionClick(e) {
-		transition = e.currentTarget.textContent
+	function demoClick(e) {
+		console.log('todo')
+	}
+
+	function transitionFinished(e) {
+		transition = ''
 	}
 </script>
 
 <svelte:head>
 	<link rel="stylesheet" href="https://unpkg.com/transition-style">
-
 	<meta name="theme-color" content="#498aeb">
   <meta name="description" content="just add water clip-path mask transitions">
 </svelte:head>
 
-<section transition="{transition}">
-  <header>
-    <h1>
-      <span>transition</span>
-      <span>.</span>
-      <span>css</span>
-    </h1>
-    <small>Just-add-water CSS clip-path transitions</small>
-  </header>
+<section transition="{transition}" 
+	on:click={demoClick}
+	on:animationend={transitionFinished}
+>
+  <Logo/>
 </section>
 
-<nav>
-	<select bind:value={transition}>
-		{#each Object.entries(transitions) as [title, groupedByShape]}
-			{#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
-				<optgroup label="{title} {direction}">
-				{#each groupedByDirection as transition}
-					<option>{transition}</option>
-				{/each}
-				</optgroup>
-			{/each}
-		{/each}
-	</select>
-
-	{#each Object.entries(transitions) as [title, groupedByShape]}
-		<h3>{title}</h3>
-		<dl>
-			{#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
-				<dt>{direction}</dt>
-				{#each groupedByDirection as transition}
-					<dd>
-						<a href="#{transition}" on:click={transitionClick}>{transition}</a>
-					</dd>
-				{/each}
-			{/each}
-		</dl>
-	{/each}
-
-	<hr>
-  <a href="https://github.com/argyleink/transition.css#custom">Customize ↗</a>
-  <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
-  <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
-</nav>
+<Sidebar />
 
 <style>
 	:root {
@@ -113,116 +82,14 @@
     place-content: center;
 	}
 
-	:global(body),p,ul,figure,
-	h1,h2,h3,h4,h5,h6,small {
-	  margin: 0;
-	}
-
 	::selection {
 	  background-color: var(--brand);
-	}
-
-	a {
-	  color: var(--text);
-	}
-
-	a:hover {
-	  color: var(--brand);
-	}
-
-	hr {
-	  inline-size: 100%;
-	  block-size: 1px;
-	  border-color: var(--surface);
-	  border-style: solid;
-	  margin-block-end: 2ch;
-	}
-
-	svg {
-	  inline-size: 100%;
-	  max-block-size: 90vh;
-	  fill: var(--white);
-	}
-
-	h1 {
-	  font-size: min(15vmin, 7rem);
-	  font-weight: 100;
-	  display: flex;
-	  color: var(--white);
-	}
-
-	h1 > span:nth-child(2) {
-		color: deeppink;
-	}
-
-	h1 > span:nth-child(3) {
-		font-weight: bold;
-		color: var(--brand-alt);
 	}
 
 	@media (max-width: 720px) {
 		:global(body) {
 		  flex-direction: column;
 		}
-
-		h1 {
-		  justify-content: center;
-		}
-
-		header {
-			text-align: center;
-		}
-
-		header > small {
-			font-size: 1.25rem;
-			font-weight: 300;
-			color: var(--brand-alt);
-		}
-
-		nav {
-			background: var(--brand);
-	    inline-size: 100%;
-	    place-content: center;
-		}
-
-		nav > *:not(select) {
-			display: none;
-		}
-
-		nav > select {
-			font-size: 1.25rem;
-			border: none;
-			background: var(--white);
-		}
-	}
-
-	@media (min-width: 720px) {
-	  header {
-	  	padding-inline-start: 5ch;
-	  	padding-block-start: 2ch;
-	  }
-
-	  nav {
-	  	flex-direction: column;
-	    max-block-size: 100vh;
-	    overflow-y: auto;
-	  }
-
-	  nav > select {
-	  	display: none;
-	  }
-
-	  nav > h3:not(:first-of-type) {
-      margin-block-start: 2ch;
-    }
-	}
-
-	nav {
-	  background: var(--surface);
-	  display: flex;
-	  gap: 1ch;
-	  padding: 3ch;
-	  box-sizing: border-box;
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -232,71 +99,5 @@
 			--white: hsl(0 0% 100%);
 			--brand: hsl(216 80% 60%);
 		}
-
-		nav {
-		  text-decoration-color: hsl(208 55% 75%);
-		}
 	}
-
-	nav > h3 {
-	  color: var(--brand);
-	  font-size: 2.5rem;
-	  font-weight: lighter;
-	  text-decoration: underline;
-	  text-decoration-color: var(--white);
-	}
-
-	dl {
-	  margin: 0;
-	  padding: 0;
-	  display: grid;
-	  gap: 1ex;
-	}
-
-	dl > dt {
-    color: deeppink;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  dl > dt:not(:first-of-type) {
-  	margin-block-start: 2ch;
-  }
-
-  [selected] > a {
-    text-decoration-color: deeppink;
-  }
-
-  :not([selected]) > a {
-    text-decoration: none;
-  }
-
-  dl > dd {
-    cursor: pointer;
-    position: relative;
-    font-size: 1.3rem;
-    font-weight: 300;
-    white-space: nowrap;
-    margin: 0;
-  }
-
-  dl > dd:is(:hover,:focus-within)::after {
-    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='deeppink' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
-    position: absolute;
-    inset: 0 0 0 -1.75ch;
-    block-size: .75em;
-    inline-size: .75em;
-  }
-
-  dl > dd > a {
-    padding-block: .5ex;
-  }
-
-  dl > dd > a:hover {
-    color: var(--brand);
-  }
-
-  dl > dd > a:focus {
-    outline: 1px dotted deeppink;
-  }
 </style>
