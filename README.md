@@ -87,7 +87,7 @@ Most of the built in transitions are from the center. Here's how you can set the
 Then, in the HTML:
 
 ```html
-<div class="... --in-custom">
+<div transition class="... --in-custom">
   A custom transitioned element
 </div>
 ```
