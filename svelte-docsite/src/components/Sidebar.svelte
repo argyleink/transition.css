@@ -1,6 +1,14 @@
 <script>
   import transitions from '../transitions.js'
-  import {transition} from '../store.js'
+  import {transition, duration, easing} from '../store.js'
+
+  const easings = [
+    'cubic-bezier(.25, 1, .30, 1)',
+    'ease-in',
+    'ease-out',
+    'ease-in-out',
+    'linear',
+  ]
 
   function transitionClick(e) {
     $transition = e.currentTarget.textContent
@@ -20,7 +28,7 @@
 </script>
 
 <nav>
-  <select bind:value={$transition}>
+  <select bind:value={$transition} class="mobile-only">
     {#each Object.entries(transitions) as [title, groupedByShape]}
       {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
         <optgroup label="{title} {direction}">
@@ -29,6 +37,21 @@
         {/each}
         </optgroup>
       {/each}
+    {/each}
+  </select>
+
+  <h3>Settings</h3>
+  <h4>Duration:</h4>
+  <select bind:value={$duration}>
+    {#each [0.5,0.75,1,2,3,4,5,6,7,10] as time}
+      <option selected={time === duration} value={time}>{time}s</option>  
+    {/each}
+  </select>
+
+  <h4>Easing:</h4>
+  <select bind:value={$easing}>
+    {#each easings as ez}
+      <option selected={ez === duration} value={ez}>{ez}</option>  
     {/each}
   </select>
 
@@ -86,9 +109,14 @@
   nav > h3 {
     color: var(--brand);
     font-size: 2.5rem;
+    text-transform: capitalize;
     font-weight: lighter;
     text-decoration: underline;
     text-decoration-color: var(--white);
+  }
+
+  nav > h3,
+  nav > h4 {
     margin: 0;
   }
 
@@ -152,7 +180,7 @@
       place-content: center;
     }
 
-    nav > *:not(select) {
+    nav > *:not(.mobile-only) {
       display: none;
     }
 
@@ -170,7 +198,7 @@
       overflow-y: auto;
     }
 
-    nav > select {
+    nav > .mobile-only {
       display: none;
     }
 
