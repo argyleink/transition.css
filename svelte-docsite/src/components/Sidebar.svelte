@@ -63,52 +63,12 @@
     fill: var(--white);
   }
 
-  @media (max-width: 720px) {
-    nav {
-      background: var(--brand);
-      inline-size: 100%;
-      place-content: center;
-    }
-
-    nav > *:not(select) {
-      display: none;
-    }
-
-    nav > select {
-      font-size: 1.25rem;
-      border: none;
-      background: var(--white);
-    }
-  }
-
-  @media (min-width: 720px) {
-    nav {
-      flex-direction: column;
-      max-block-size: 100vh;
-      overflow-y: auto;
-    }
-
-    nav > select {
-      display: none;
-    }
-
-    nav > h3:not(:first-of-type) {
-      margin-block-start: 2ch;
-    }
-  }
-
   nav {
     background: var(--surface);
     display: flex;
     gap: 1ch;
     padding: 3ch;
     box-sizing: border-box;
-  }
-
-  @media (prefers-color-scheme: light) {
-    nav {
-      text-decoration-color: hsl(208 55% 75%);
-    }
   }
 
   nav > h3 {
@@ -169,5 +129,47 @@
 
   dl > dd > a:focus {
     outline: 1px dotted deeppink;
+  }
+
+  
+
+  @media (max-width: 720px) {
+    nav {
+      background: var(--brand);
+      inline-size: 100%;
+      place-content: center;
+    }
+
+    nav > *:not(select) {
+      display: none;
+    }
+
+    nav > select {
+      font-size: 1.25rem;
+      border: none;
+      background: var(--white);
+    }
+  }
+
+  @media (min-width: 720px) {
+    nav {
+      flex-direction: column;
+      max-block-size: 100vh;
+      overflow-y: auto;
+    }
+
+    nav > select {
+      display: none;
+    }
+
+    nav > h3:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    nav {
+      text-decoration-color: hsl(208 55% 75%);
+    }
   }
 </style>
