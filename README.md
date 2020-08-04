@@ -1,6 +1,6 @@
 <p style="text-align:center">
 <a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/app/logo.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
 </a>
 </p>
 
@@ -13,27 +13,46 @@
 
 ### Just-add-water CSS clip-path transitions
 
+```html
+<link rel="stylesheet" href="https://unpkg.com/transition-style">
 
+<div transition="in:wipe:up">
+  👍
+</div>
+```
+
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 #### Installation
 **NPM**  
 1. `npm i transition-style` 
-2. `@import "transition-style";` in your CSS or `import 'transition-style';` in your Javascript 
+2. from **CSS**
+```css
+@import "transition-style";
+```
+3. or from **JS** 
+```js
+import 'transition-style';
+```
 
 <br>
 
 **CDN**  
-**Latest** at `https://unpkg.com/transition-style`  
-  
-Or import **individual category bundles**
-  - `https://unpkg.com/transition-style/transition.circles.min.css`
-  - `https://unpkg.com/transition-style/transition.squares.min.css`
-  - `https://unpkg.com/transition-style/transition.polygons.min.css`
-  - `https://unpkg.com/transition-style/transition.wipes.min.css`
+`https://unpkg.com/transition-style`  
 
-Or go a **slim & custom** route by importing the `hackpack`
-  - `https://unpkg.com/transition-style/transition.hackpack.min.css`
-  - It's just the custom props. Build [custom](#custom) `@keyframe` animations with them. 
+**Individual Category Bundles**
+  - Circles: `https://unpkg.com/transition-style/transition.circles.min.css`
+  - Squares: `https://unpkg.com/transition-style/transition.squares.min.css`
+  - Polygons: `https://unpkg.com/transition-style/transition.polygons.min.css`
+  - Wipes: `https://unpkg.com/transition-style/transition.wipes.min.css`
+
+**THE HACKPACK**  
+`https://unpkg.com/transition-style/transition.hackpack.min.css`  
+ONLY the custom properties and a couple base styles. **More options, more control, smaller import.**
+Build [custom](#custom) `@keyframe` animations and MUCH more: 
+- custom transitions leveraging provided variables
+- multi-part transitions that aren't just `from` and `to`
+- use classes (make your own BEM convention) or integrate in your CSS-in-JS architecture or front end framework
 
 > Custom properties ship with each `.min.css` as well
   
@@ -54,6 +73,8 @@ After `transition.css` has been added to your project, add an attribute to an el
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
 
+Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple "transition in" classes are applied to an element? Transition.css chooses to default with a state machine approach. See the [custom](#custom) section below for ways to use classes and/or the custom properties, so transition.css can fit into your development environment. It's very flexible, the built in attribute based approach is very easy to hack and customize. 
+
 Transition.css is very similar to [animate.css](https://animate.style). The docs they've made are excellent and show many examples of advanced usage of libraries like this. You'll notice `transition.css` is very inspired by `animate.css`.
 
 <br><br>
@@ -73,8 +94,9 @@ Most of the built in transitions are from the center. Here's how you can set the
   }
 }
 
-[transition="in:custom:circle-swoop"] {
+.--in-custom {
   --transition__duration: 1s;
+  --transition__easing: ease-in-out;
   animation-name: circle-swoop;
 }
 ```
@@ -82,7 +104,7 @@ Most of the built in transitions are from the center. Here's how you can set the
 Then, in the HTML:
 
 ```html
-<div transition="in:custom:circle-swoop">
+<div transition class="... --in-custom">
   A custom transitioned element
 </div>
 ```

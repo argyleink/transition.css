@@ -1,0 +1,15 @@
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: var(--circle-center-center-out);
+  }
+  40% {
+    clip-path: var(--circle-hesitate);
+  }
+  100% {
+    clip-path: var(--circle-center-center-in);
+  }
+}
+
+[transition="in:circle:hesitate"] {
+  animation-name: circle-in-hesitate;
+}

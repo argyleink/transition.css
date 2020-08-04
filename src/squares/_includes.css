@@ -1,6 +1,9 @@
+@import "in-hesitate.css";
+@import "out-hesitate.css";
+
 @import "in-center.css";
-@import "out-center.css"
-;
+@import "out-center.css";
+
 @import "out-top-left.css";
 @import "out-top-right.css";
 @import "out-bottom-left.css";
