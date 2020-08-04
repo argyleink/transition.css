@@ -12,20 +12,35 @@
 </p>
 
 ### Just-add-water CSS clip-path transitions
-State machine style; set the attribute `<div transition="in:wipe:up">👍</div>`
+import and set the attribute
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/transition-style">
+
+<div transition="in:wipe:up">
+  👍
+</div>
+```
 
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 #### Installation
 **NPM**  
 1. `npm i transition-style` 
-2. `@import "transition-style";` from CSS
-3. or `import 'transition-style';` from JS
+2. from **CSS**
+```css
+@import "transition-style";
+```
+3. or from **JS** 
+```js
+import 'transition-style';
+```
 
 <br>
 
 **CDN**  
-**Latest:** `https://unpkg.com/transition-style`  
+`https://unpkg.com/transition-style`  
+
 **Individual Category Bundles**
   - Circles: `https://unpkg.com/transition-style/transition.circles.min.css`
   - Squares: `https://unpkg.com/transition-style/transition.squares.min.css`
