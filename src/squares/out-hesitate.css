@@ -1,0 +1,15 @@
+@keyframes square-out-hesitate {
+  0% {
+    clip-path: var(--square-in);
+  }
+  40% {
+    clip-path: var(--square-hesitate);
+  }
+  100% {
+    clip-path: var(--square-out);
+  }
+}
+
+[transition="out:square:hesitate"] {
+  animation-name: square-out-hesitate;
+}

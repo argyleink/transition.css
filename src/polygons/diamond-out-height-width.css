@@ -3,14 +3,14 @@
     clip-path: var(--diamond-center-in);
   }
   40% {
-    clip-path: var(--diamond-height-stretched);
+    clip-path: var(--diamond-hesitate);
   }
   100% {
     clip-path: var(--diamond-center-out);
   }
 }
 
-[transition="out:diamond:height-width"] {
+[transition="out:diamond:hesitate"] {
   --transition__duration: 1.5s;
   animation-name: diamond-out-double-scale;
 }

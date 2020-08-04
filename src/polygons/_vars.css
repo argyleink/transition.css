@@ -1,7 +1,7 @@
 :root {
   --diamond-center-in: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
   --diamond-center-out: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-  --diamond-height-stretched: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
+  --diamond-hesitate: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
 
   --opposing-corners-in: polygon(0 0, 0 100%, 100% 100%, 100% 0);
   --opposing-corners-out: polygon(0 0, 50% 50%, 100% 100%, 50% 50%);
