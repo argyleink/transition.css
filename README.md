@@ -12,7 +12,7 @@
 </p>
 
 ### Just-add-water CSS clip-path transitions
-
+State machine style; set the attribute `<div transition="in:wipe:up">...</div>` and watch it go 👍
 
 
 #### Installation
@@ -31,11 +31,13 @@
   - Polygons: `https://unpkg.com/transition-style/transition.polygons.min.css`
   - Wipes: `https://unpkg.com/transition-style/transition.wipes.min.css`
 
-**THE HACKPACK** `https://unpkg.com/transition-style/transition.hackpack.min.css`  
-ONLY the custom properties and a few base styles. **More options, more control, smaller import.**
-Build [custom](#custom) `@keyframe` animations with them and much more. Make multi-part transitions 
-that aren't just from and to. You can even break away from the use of attributes and make your own BEM class convention. 
-Grab the reigns, grab the hackpack.
+**THE HACKPACK**  
+`https://unpkg.com/transition-style/transition.hackpack.min.css`  
+ONLY the custom properties and a couple base styles. **More options, more control, smaller import.**
+Build [custom](#custom) `@keyframe` animations and MUCH more: 
+- custom transitions leveraging provided variables
+- multi-part transitions that aren't just `from` and `to`
+- use classes (make your own BEM convention) or integrate in your CSS-in-JS architecture or front end framework
 
 > Custom properties ship with each `.min.css` as well
   
