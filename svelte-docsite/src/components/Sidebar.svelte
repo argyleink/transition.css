@@ -43,18 +43,22 @@
 
   <h3>Settings</h3>
   <h4>--transition__duration:</h4>
-  <select bind:value={$duration}>
-    {#each [0.5,0.75,1,1.5,2,2.5,3,4,5,6,7,10] as time}
-      <option value={time}>{time}s</option>  
-    {/each}
-  </select>
+  <div>
+    <select bind:value={$duration}>
+      {#each [0.5,0.75,1,1.5,2,2.5,3,4,5,6,7,10] as time}
+        <option value={time}>{time}s</option>  
+      {/each}
+    </select>
+  </div>
 
   <h4>--transition__easing:</h4>
-  <select bind:value={$easing}>
-    {#each easings as ez}
-      <option value={ez}>{ez}</option>  
-    {/each}
-  </select>
+  <div>
+    <select bind:value={$easing}>
+      {#each easings as ez}
+        <option value={ez}>{ez}</option>  
+      {/each}
+    </select>
+  </div>
 
   {#each Object.entries(transitions) as [title, groupedByShape]}
     <h3>{title}</h3>
