@@ -1,6 +1,7 @@
 <script>
   import transitions from '../transitions.js'
   import {transition, duration, easing} from '../store.js'
+  import {GithubSVG} from '../icons.js'
 
   const easings = [
     'ease-in',
@@ -69,7 +70,14 @@
     </dl>
   {/each}
 
-  <hr>
+  <div class="icon-break">
+    <a href="https://github.com/argyleink/transition.css">
+      <svg viewbox="0 0 512 512">
+        {@html GithubSVG}
+      </svg>
+    </a>
+  </div>
+  
   <a href="https://github.com/argyleink/transition.css#custom">Customize ↗</a>
   <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
   <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
@@ -84,14 +92,6 @@
     color: var(--brand);
   }
 
-  hr {
-    inline-size: 100%;
-    block-size: 1px;
-    border-color: var(--surface);
-    border-style: solid;
-    margin-block-end: 2ch;
-  }
-
   svg {
     inline-size: 100%;
     max-block-size: 90vh;
@@ -99,7 +99,8 @@
   }
 
   nav {
-    background: var(--surface);
+    background: hsl(var(--surfaceHSL) / 80%);
+    backdrop-filter: blur(10px);
     display: flex;
     gap: 1ch;
     padding: 3ch;
@@ -171,7 +172,13 @@
     outline: 1px dotted deeppink;
   }
 
+  .icon-break {
+    margin-block: 3ch 2ch;
+  }
 
+  .icon-break svg {
+    max-inline-size: 5ch;
+  }
 
   @media (max-width: 720px) {
     nav {

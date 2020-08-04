@@ -18,7 +18,9 @@
 	}
 
 	function transitionFinished() {
-		active_transition = ''
+		active_transition = active_transition.includes('out')
+			? active_transition.replace('out','in')
+			: ''
 	}
 </script>
 
@@ -44,18 +46,22 @@
 <style>
 	:root {
 	  --surface: hsl(0 0% 6%);
+		--surfaceHSL: 0 0% 6%;
 	  --text: hsl(0 0% 78%);
 	  --white: hsl(205 100% 94%);
 	  --brand: hsl(208 46% 55%);
+		--brandHSL: 208 46% 55%;
 	  --brand-alt: hsl(205 100% 94%);
 	}
 
 	@media (prefers-color-scheme: light) {
 		:root {
 			--surface: hsl(0 0% 100%);
+			--surfaceHSL: 0 0% 100%;
 			--text: hsl(0 0% 27%);
 			--white: hsl(0 0% 100%);
 			--brand: hsl(216 80% 60%);
+			--brandHSL: 216 80% 60%;
 		}
 	}
 
@@ -91,7 +97,8 @@
 	}
 
 	:global(body) > section {
-    background: var(--brand);
+    background: hsl(var(--brandHSL) / 80%);
+		backdrop-filter: blur(5px);
     color: var(--white);
     flex: 2;
     inline-size: 100%;
