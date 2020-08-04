@@ -1,6 +1,7 @@
 export default {
   circles: {
     entrances: [
+      'in:circle:hesitate',
       'in:circle:center',
       'in:circle:top-right',
       'in:circle:top-left',
@@ -8,6 +9,7 @@ export default {
       'in:circle:bottom-left',
     ],
     exits: [
+      'out:circle:hesitate',
       'out:circle:center',
       'out:circle:top-right',
       'out:circle:top-left',
@@ -18,6 +20,7 @@ export default {
   squares: {
     entrances: [
       'in:square:center',
+      'in:square:hesitate',
       'in:square:top-right',
       'in:square:top-left',
       'in:square:bottom-right',
@@ -25,6 +28,7 @@ export default {
     ],
     exits: [
       'out:square:center',
+      'out:square:hesitate',
       'out:square:top-right',
       'out:square:top-left',
       'out:square:bottom-right',
@@ -56,10 +60,12 @@ export default {
   polygons: {
     entrances: [
       'in:diamond:center',
+      'in:diamond:hesitate',
       'in:polygon:opposing-corners',
     ],
     exits: [
       'out:diamond:center',
+      'out:diamond:hesitate',
       'out:polygon:opposing-corners',
     ],
   },
