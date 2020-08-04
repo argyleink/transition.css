@@ -25,6 +25,7 @@
 </script>
 
 <svelte:head>
+	<title>Transition.css - easy transitions with clip-path</title>
 	<link rel="stylesheet" href="https://unpkg.com/transition-style">
 	<meta name="theme-color" content="#498aeb">
   <meta name="description" content="just add water clip-path mask transitions">
