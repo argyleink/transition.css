@@ -1,0 +1,16 @@
+@keyframes diamond-out-double-scale {
+  0% {
+    clip-path: var(--diamond-center-in);
+  }
+  40% {
+    clip-path: var(--diamond-height-stretched);
+  }
+  100% {
+    clip-path: var(--diamond-center-out);
+  }
+}
+
+[transition="out:diamond:height-width"] {
+  --transition__duration: 1.5s;
+  animation-name: diamond-out-double-scale;
+}
