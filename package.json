@@ -36,10 +36,6 @@
     "postcss-cli": "7.1.1",
     "postcss-easings": "^2.0.0",
     "postcss-import": "^12.0.1",
-    "postcss-import-url": "^5.1.0",
     "postcss-loader": "^3.0.0"
-  },
-  "dependencies": {
-    "blingblingjs": "^2.1.1"
   }
 }
