@@ -1,6 +1,6 @@
 <p style="text-align:center">
 <a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/app/logo.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
 </a>
 </p>
 
@@ -14,6 +14,7 @@
 ### Just-add-water CSS clip-path transitions
 State machine style; set the attribute `<div transition="in:wipe:up">...</div>` and watch it go 👍
 
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 #### Installation
 **NPM**  
