@@ -43,6 +43,7 @@ $('select').on('change', e => {
   update(transition)
 })
 
-$demo.on('animationend', e => {
-  $demo.attr('transition', '')
-})
+$demo.on('animationend', e =>
+  $demo.attr('transition', state.transition.includes('out')
+    ? state.transition.replace('out','in')
+    : ''))
