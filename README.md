@@ -12,7 +12,6 @@
 </p>
 
 ### Just-add-water CSS clip-path transitions
-import and set the attribute
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
