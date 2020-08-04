@@ -12,7 +12,7 @@
 </p>
 
 ### Just-add-water CSS clip-path transitions
-State machine style; set the attribute `<div transition="in:wipe:up">...</div>` and watch it go 👍
+State machine style; set the attribute `<div transition="in:wipe:up">👍</div>`
 
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
