@@ -118,11 +118,7 @@ Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb
 <br><br>
 
 ## Development
-Running `npm start` runs Browsersync, Rollup and Postcss concurrently, watching changes to your files in `./app` and refreshes connected browsers.
+See the `svelte` branch.
 
 ## Production
-Running `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready for static hosting.
-
-Running `npm run production` will build your project and start a server at `dist`.
-
-`npm run lib` to build the library files
+`npm run bundle` concurrently bundles and minifies. 
