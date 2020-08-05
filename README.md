@@ -56,7 +56,9 @@ Build [custom](#custom) `@keyframe` animations and MUCH more:
 
 > Custom properties ship with each `.min.css` as well
   
-<br><br>
+<br>
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
+<br>
 
 #### Usage
 After `transition.css` has been added to your project, add an attribute to an element and watch the magic:  
