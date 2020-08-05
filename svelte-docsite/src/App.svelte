@@ -50,9 +50,9 @@
 		--surfaceHSL: 0 0% 6%;
 	  --text: hsl(0 0% 78%);
 	  --white: hsl(205 100% 94%);
-	  --brand: hsl(208 46% 55%);
-		--brandHSL: 208 46% 55%;
-	  --brand-alt: hsl(205 100% 94%);
+	  --brand: hsl(208 46% 45%);
+		--brandHSL: 208 46% 45%;
+	  --brand-alt: hsl(205 100% 85%);
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -61,8 +61,8 @@
 			--surfaceHSL: 0 0% 100%;
 			--text: hsl(0 0% 27%);
 			--white: hsl(0 0% 100%);
-			--brand: hsl(216 80% 60%);
-			--brandHSL: 216 80% 60%;
+			--brand: hsl(216 80% 54%);
+			--brandHSL: 216 80% 54%;
 		}
 	}
 

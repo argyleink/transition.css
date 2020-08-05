@@ -117,7 +117,7 @@
     text-transform: capitalize;
     font-weight: lighter;
     text-decoration: underline;
-    text-decoration-color: var(--white);
+    text-decoration-color: var(--brand-alt);
   }
 
   nav > h3,
@@ -217,12 +217,6 @@
 
     nav > h3:not(:first-of-type) {
       margin-block-start: 2ch;
-    }
-  }
-
-  @media (prefers-color-scheme: light) {
-    nav {
-      text-decoration-color: hsl(208 55% 75%);
     }
   }
 </style>

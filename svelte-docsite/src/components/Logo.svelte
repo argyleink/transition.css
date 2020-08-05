@@ -22,7 +22,7 @@
   }
 
   h1 > span:nth-child(2) {
-    color: deeppink;
+    color: var(--brand-alt);
   }
 
   h1 > span:nth-child(3) {
