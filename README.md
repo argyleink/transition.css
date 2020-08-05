@@ -11,7 +11,7 @@
   <img src="https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status" alt="Netlify Status">
 </p>
 
-### Just-add-water CSS clip-path transitions
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -20,8 +20,6 @@
   👍
 </div>
 ```
-
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 #### Installation
 **NPM**  
@@ -46,8 +44,9 @@ import 'transition-style';
   - Polygons: `https://unpkg.com/transition-style/transition.polygons.min.css`
   - Wipes: `https://unpkg.com/transition-style/transition.wipes.min.css`
 
-**THE HACKPACK**  
+**👉 The Hackpack**  
 `https://unpkg.com/transition-style/transition.hackpack.min.css`  
+
 ONLY the custom properties and a couple base styles. **More options, more control, smaller import.**
 Build [custom](#custom) `@keyframe` animations and MUCH more: 
 - custom transitions leveraging provided variables
