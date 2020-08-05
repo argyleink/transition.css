@@ -15,11 +15,11 @@
 </a>
 </p>
 
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
-
 <br>
 
 ## Basics
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
+
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
@@ -87,6 +87,7 @@ Transition.css is very similar to [animate.css](https://animate.style). The docs
 
 <br><br>
 
+## Advanced
 #### Custom
 Go off the rails and build your own transitions with the custom props that ship with the each bundle. There's even the `hackpack` which is exclusively the custom props 🤘💀
 
