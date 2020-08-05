@@ -43,8 +43,8 @@ export default {
       'in:wipe:down',
       'in:wipe:top-right',
       'in:wipe:top-left',
-      'in:wipe:bottom-up',
-      'in:wipe:bottom-down',
+      'in:wipe:bottom-right',
+      'in:wipe:bottom-left',
     ],
     exits: [
       'out:wipe:right',
@@ -53,8 +53,8 @@ export default {
       'out:wipe:down',
       'out:wipe:top-right',
       'out:wipe:top-left',
-      'out:wipe:bottom-up',
-      'out:wipe:bottom-down',
+      'out:wipe:bottom-right',
+      'out:wipe:bottom-left',
     ],
   },
   polygons: {
