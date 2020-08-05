@@ -5,10 +5,6 @@
   <img src="https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status" alt="Netlify Status">
 </p>
 
-<br>
-
-<h1 align="center">Transition.css</h1>
-
 <p align="center">
 <a href="https://transition.style" target="_blank">
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
