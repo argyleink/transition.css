@@ -186,7 +186,7 @@
     max-inline-size: 5ch;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 960px) {
     nav {
       background: var(--brand);
       inline-size: 100%;
@@ -204,7 +204,7 @@
     }
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 960px) {
     nav {
       flex-direction: column;
       max-block-size: 100vh;

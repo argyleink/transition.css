@@ -28,7 +28,7 @@
 	<title>Transition.css - easy transitions with clip-path</title>
 	<link rel="stylesheet" href="https://unpkg.com/transition-style">
 	<meta name="theme-color" content="#498aeb">
-  <meta name="description" content="just add water clip-path mask transitions">
+  <meta name="description" content="Drop-in CSS transitions">
 </svelte:head>
 
 <section transition="{active_transition}" 
@@ -114,7 +114,7 @@
 	  background-color: hsl(var(--brandHSL) / 10%);
 	}
 
-	@media (max-width: 720px) {
+	@media (max-width: 960px) {
 		:global(body) {
 		  flex-direction: column;
 		  background-position: 0 calc(100vh - 19ch);
