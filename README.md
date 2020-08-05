@@ -1,18 +1,25 @@
-<p style="text-align:center">
-<a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
-</a>
-</p>
-
-<p style="text-align='center'">
+<p align="center">
   <img src="https://img.shields.io/npm/dt/transition.css.svg" alt="Total Downloads">
   <img src="https://img.shields.io/npm/v/transition.css.svg" alt="Latest Release">
   <img src="https://img.shields.io/npm/l/transition.css.svg" alt="License">
   <img src="https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status" alt="Netlify Status">
 </p>
 
+<br>
+
+<h1 align="center">Transition.css</h1>
+
+<p align="center">
+<a href="https://transition.style" target="_blank">
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
+</a>
+</p>
+
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
+<br>
+
+## Basics
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
