@@ -85,6 +85,8 @@ After `transition.css` has been added to your project, add an attribute to an el
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
 
+<br>
+
 #### Using `@keyframes`
 Each bundle ships with the `@keyframes` declared, and you can use them as you see fit. You can use these to build your own animations or just hook into the presets in your own way:
 
@@ -95,6 +97,8 @@ Each bundle ships with the `@keyframes` declared, and you can use them as you se
   animation-fill-mode: both;
 }
 ```
+
+<br>
 
 #### Using CSS Custom Properties
 Each bundle ships with clearly named custom properties which contain the state and geometry needed to orchestrate custom transitions. 
@@ -115,6 +119,7 @@ or target a specific transition and override it's defaults:
 }
 ```
 
+#### Custom
 Go off the rails and build your own transitions with these variables. There's even the `hackpack` which is exclusively the custom props 🤘💀 Most of the built in transitions are from the center in Transition.css, here's how you can set the `from` transition to somewhere custom:
 
 ```css
