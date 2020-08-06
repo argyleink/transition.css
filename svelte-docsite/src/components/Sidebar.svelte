@@ -82,7 +82,7 @@
     </a>
   </div>
   
-  <a href="https://github.com/argyleink/transition.css#custom">Customize ↗</a>
+  <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
   <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
   <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
 </nav>
