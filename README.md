@@ -92,11 +92,13 @@ Each bundle ships with the `@keyframes` declared, and you can use them as you se
 
 ```css
 .main--state-in {
-  animation: wipe-in-left; /* https://github.com/argyleink/transition.css/blob/main/src/wipes/in-left.css */
+  animation: wipe-in-left;
   animation-duration: 2s;
   animation-fill-mode: both;
 }
 ```
+
+Checkout the [src](https://github.com/argyleink/transition.css/blob/main/src) to find the names of the `@keyframe` animations. They follow a pattern like the attributes, so you should be able to assume what they are with decent accuracy. 
 
 <br>
 
