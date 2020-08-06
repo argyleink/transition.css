@@ -24,45 +24,53 @@
 </div>
 ```
 
-#### Installation
-**NPM**  
+Choose from **46 pre-built transitions!**  
+
+Hands on at [Codepen](https://codepen.io/argyleink/pen/RwrzGJb) or preview all 46 @ [transition.style](https://transition.style)
+
+<br>
+
+## Installation
+#### NPM  
 1. `npm i transition-style` 
-2. from **CSS**
+2. import from **CSS**
 ```css
 @import "transition-style";
 ```
-3. or from **JS** 
+3. or import from **JS** 
 ```js
 import 'transition-style';
 ```
 
 <br>
 
-**CDN**  
+#### CDN 
 `https://unpkg.com/transition-style`  
 
 **Individual Category Bundles**
-  - Circles: `https://unpkg.com/transition-style/transition.circles.min.css`
-  - Squares: `https://unpkg.com/transition-style/transition.squares.min.css`
-  - Polygons: `https://unpkg.com/transition-style/transition.polygons.min.css`
-  - Wipes: `https://unpkg.com/transition-style/transition.wipes.min.css`
+  - **Circles** `https://unpkg.com/transition-style/transition.circles.min.css`
+  - **Squares** `https://unpkg.com/transition-style/transition.squares.min.css`
+  - **Polygons** `https://unpkg.com/transition-style/transition.polygons.min.css`
+  - **Wipes** `https://unpkg.com/transition-style/transition.wipes.min.css`
 
-**👉 The Hackpack**  
+<br>
+
+### 👉 The Hackpack 
 `https://unpkg.com/transition-style/transition.hackpack.min.css`  
 
-ONLY the custom properties and a couple base styles. **More options, more control, smaller import.**
-Build [custom](#custom) `@keyframe` animations and MUCH more: 
-- custom transitions leveraging provided variables
-- multi-part transitions that aren't just `from` and `to`
-- use classes (make your own BEM convention) or integrate in your CSS-in-JS architecture or front end framework
+**More options, more control, smaller import**  
+by importing only the custom properties and base styles:
+- compose custom transition combinations
+- create multi-part transitions
+- use classes or CSS-in-JS that leverage transition.css custom props
 
 > Custom properties ship with each `.min.css` as well
   
 <br>
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
-<br>
+<br><br>
 
-#### Usage
+## Usage
 After `transition.css` has been added to your project, add an attribute to an element and watch the magic:  
 
 ```html
@@ -77,17 +85,37 @@ After `transition.css` has been added to your project, add an attribute to an el
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
 
-Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple "transition in" classes are applied to an element? Transition.css chooses to default with a state machine approach. See the [custom](#custom) section below for ways to use classes and/or the custom properties, so transition.css can fit into your development environment. It's very flexible, the built in attribute based approach is very easy to hack and customize. 
+#### Using `@keyframes`
+Each bundle ships with the `@keyframes` declared, and you can use them as you see fit. You can use these to build your own animations or just hook into the presets in your own way:
 
-Transition.css is very similar to [animate.css](https://animate.style). The docs they've made are excellent and show many examples of advanced usage of libraries like this. You'll notice `transition.css` is very inspired by `animate.css`.
+```css
+.main--state-in {
+  animation: wipe-in-left; /* https://github.com/argyleink/transition.css/blob/main/src/wipes/in-left.css */
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+```
 
-<br><br>
+#### Using CSS Custom Properties
+Each bundle ships with clearly named custom properties which contain the state and geometry needed to orchestrate custom transitions. 
 
-## Advanced
-#### Custom
-Go off the rails and build your own transitions with the custom props that ship with the each bundle. There's even the `hackpack` which is exclusively the custom props 🤘💀
+```css
+.overrides {
+  --transition__duration: 1s;            /* default: 2.5s */
+  --transition__easing: ease-in-out;     /* default: cubic-bezier(.25, 1, .30, 1) */
+  --transition__delay: 1s;               /* default: 0 */
+}
+```
 
-Most of the built in transitions are from the center. Here's how you can set the `from` transition to somewhere custom. This is also the animation used on page load for [transition.style](https://transition.style).
+or target a specific transition and override it's defaults:
+
+```css
+[transition="in:wipe:up"] {
+  --transition__duration: 1s;
+}
+```
+
+Go off the rails and build your own transitions with these variables. There's even the `hackpack` which is exclusively the custom props 🤘💀 Most of the built in transitions are from the center in Transition.css, here's how you can set the `from` transition to somewhere custom:
 
 ```css
 @keyframes circle-swoop {
@@ -115,6 +143,8 @@ Then, in the HTML:
 ```
 
 > The only rule is that you must transition from the same type of shapes
+
+At this point you're using Transition.css to it's maximum. You can reach a huge set of transitions by using the custom properties. Have fun!
 
 #### Play
 Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb)
