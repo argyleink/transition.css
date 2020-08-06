@@ -119,8 +119,10 @@ or target a specific transition and override it's defaults:
 }
 ```
 
+<br>
+
 #### Custom
-Go off the rails and build your own transitions with these variables. There's even the `hackpack` which is exclusively the custom props 🤘💀 Most of the built in transitions are from the center in Transition.css, here's how you can set the `from` transition to somewhere custom:
+Go off the rails and build your own transitions with these variables. There's even the `The Hackpack` which is exclusively the custom props 🤘💀  Here's how you can compose a brand new transition from the custom property primitives:
 
 ```css
 @keyframes circle-swoop {
