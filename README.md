@@ -7,7 +7,7 @@
 
 <p align="center">
 <a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
 </a>
 </p>
 
@@ -59,7 +59,7 @@ Build [custom](#custom) `@keyframe` animations and MUCH more:
 > Custom properties ship with each `.min.css` as well
   
 <br>
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
 <br>
 
 #### Usage
