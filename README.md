@@ -1,17 +1,20 @@
-<p style="text-align:center">
-<a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
-</a>
-</p>
-
-<p style="text-align='center'">
+<p align="center">
   <img src="https://img.shields.io/npm/dt/transition.css.svg" alt="Total Downloads">
   <img src="https://img.shields.io/npm/v/transition.css.svg" alt="Latest Release">
   <img src="https://img.shields.io/npm/l/transition.css.svg" alt="License">
   <img src="https://api.netlify.com/api/v1/badges/58d0ecf5-6241-4209-aa35-cf09983e0b37/deploy-status" alt="Netlify Status">
 </p>
 
-### Just-add-water CSS clip-path transitions
+<p align="center">
+<a href="https://transition.style" target="_blank">
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
+</a>
+</p>
+
+<br>
+
+## Basics
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -20,8 +23,6 @@
   👍
 </div>
 ```
-
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 #### Installation
 **NPM**  
@@ -46,8 +47,9 @@ import 'transition-style';
   - Polygons: `https://unpkg.com/transition-style/transition.polygons.min.css`
   - Wipes: `https://unpkg.com/transition-style/transition.wipes.min.css`
 
-**THE HACKPACK**  
+**👉 The Hackpack**  
 `https://unpkg.com/transition-style/transition.hackpack.min.css`  
+
 ONLY the custom properties and a couple base styles. **More options, more control, smaller import.**
 Build [custom](#custom) `@keyframe` animations and MUCH more: 
 - custom transitions leveraging provided variables
@@ -57,7 +59,7 @@ Build [custom](#custom) `@keyframe` animations and MUCH more:
 > Custom properties ship with each `.min.css` as well
   
 <br>
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
 <br>
 
 #### Usage
@@ -81,6 +83,7 @@ Transition.css is very similar to [animate.css](https://animate.style). The docs
 
 <br><br>
 
+## Advanced
 #### Custom
 Go off the rails and build your own transitions with the custom props that ship with the each bundle. There's even the `hackpack` which is exclusively the custom props 🤘💀
 
@@ -119,11 +122,7 @@ Play and experiment with [this Codepen](https://codepen.io/argyleink/pen/RwrzGJb
 <br><br>
 
 ## Development
-Running `npm start` runs Browsersync, Rollup and Postcss concurrently, watching changes to your files in `./app` and refreshes connected browsers.
+See the `svelte` branch.
 
 ## Production
-Running `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready for static hosting.
-
-Running `npm run production` will build your project and start a server at `dist`.
-
-`npm run lib` to build the library files
+`npm run bundle` concurrently bundles and minifies. 
