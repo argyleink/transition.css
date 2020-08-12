@@ -1,4 +1,8 @@
-<header>
+<script>
+	export let backdrop = false
+</script>
+
+<header class={backdrop?'is-backdrop':''}>
   <h1>
     <span>transition</span>
     <span>.</span>
@@ -21,13 +25,13 @@
     margin: 0;
   }
 
-  h1 > span:nth-child(2) {
+  h1 > span:nth-child(2),
+  h1 > span:nth-child(3) {
     color: var(--brand-alt);
   }
 
   h1 > span:nth-child(3) {
     font-weight: bold;
-    color: var(--brand-alt);
   }
 
   h1 svg {
@@ -35,6 +39,28 @@
     width: 1em;
     position: relative;
     top: .1ex;
+  }
+
+  .is-backdrop h1 {
+    color: deeppink;
+  }
+
+  .is-backdrop p,
+  .is-backdrop h1 > span:nth-child(2),
+  .is-backdrop h1 > span:nth-child(3) {
+    color: white;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .is-backdrop h1 {
+      color: var(--text);
+    }
+    
+    .is-backdrop p,
+    .is-backdrop h1 > span:nth-child(2),
+    .is-backdrop h1 > span:nth-child(3) {
+      color: deeppink;
+    }
   }
 
   p {

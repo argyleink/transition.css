@@ -31,18 +31,26 @@
   <meta name="description" content="Drop-in CSS transitions">
 </svelte:head>
 
-<section transition="{active_transition}" 
-	on:click={demoClick}
-	on:animationend={transitionFinished}
-	style="
-	  --transition__duration: {$duration}s;
-	  --transition__easing: {$ease};
-	"
->
-  <Logo/>
-</section>
+<main>
 
-<Sidebar />
+	<section class="backdrop">
+		<Logo backdrop=true/>
+	</section>
+
+	<section transition="{active_transition}" 
+		on:click={demoClick}
+		on:animationend={transitionFinished}
+		style="
+			--transition__duration: {$duration}s;
+			--transition__easing: {$ease};
+		"
+	>
+		<Logo/>
+	</section>
+
+	<Sidebar />
+
+</main>
 
 <style>
 	:root {
@@ -81,7 +89,7 @@
 	}
 
 	:global(body) {
-	  background-color: var(--surface);
+		background-color: var(--surface);
 	  background-position: bottom left;
 	  background-repeat: no-repeat;
 	  background-image: 
@@ -92,14 +100,17 @@
 	  color: var(--text);
 	  font-family: system-ui, sans-serif;
 	  min-block-size: 100vh;
-	  display: flex;
-	  justify-content: space-between;
 	  padding: 0;
 	}
 
-	:global(body) > section {
+	main {
+	  display: grid;
+		grid: [stack] 1fr / [stack] 1fr [sidebar] auto;
+	}
+
+	main > section {
+		grid-area: stack;
     background-color: hsl(var(--brandHSL) / 80%);
-		backdrop-filter: blur(5px);
     color: var(--white);
     flex: 2;
     inline-size: 100%;
@@ -110,17 +121,23 @@
     place-content: center;
 	}
 
+	.backdrop {
+		background-color: hsl(var(--brandHSL) / 1%);
+		backdrop-filter: blur(5px);
+	}
+
 	::selection {
 	  background-color: hsl(var(--brandHSL) / 10%);
 	}
 
 	@media (max-width: 960px) {
-		:global(body) {
-		  flex-direction: column;
+		main {
+			min-height: 100vh;
+		  grid: [stack] 1fr [sidebar] auto / [stack] 1fr;
 		  background-position: 0 calc(100vh - 19ch);
 		}
 
-		:global(body) > section {
+		main > section {
 			background: var(--brand);
 		}
 	}
