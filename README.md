@@ -42,16 +42,18 @@ Hands on at [Codepen](https://codepen.io/argyleink/pen/RwrzGJb) or preview all 4
 import 'transition-style';
 ```
 
-<br>
-
 #### CDN 
 `https://unpkg.com/transition-style`  
+
+<br>
 
 **Individual Category Bundles**
   - **Circles** `https://unpkg.com/transition-style/transition.circles.min.css`
   - **Squares** `https://unpkg.com/transition-style/transition.squares.min.css`
   - **Polygons** `https://unpkg.com/transition-style/transition.polygons.min.css`
   - **Wipes** `https://unpkg.com/transition-style/transition.wipes.min.css`
+  
+> Import category bundles from NPM too `import "transition-style/transition.circles.min.css"`
 
 <br>
 
