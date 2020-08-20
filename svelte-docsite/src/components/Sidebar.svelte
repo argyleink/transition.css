@@ -209,6 +209,7 @@
       flex-direction: column;
       max-block-size: 100vh;
       overflow-y: auto;
+      overscroll-behavior-y: none;
     }
 
     nav > .mobile-only {
