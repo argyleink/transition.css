@@ -103,7 +103,7 @@
 
 	main > section {
 		grid-area: stack;
-    background-color: hsl(var(--brandHSL) / 80%);
+    background-color: hsl(var(--brandHSL));
     color: var(--white);
     flex: 2;
     inline-size: 100%;
@@ -115,8 +115,7 @@
 	}
 
 	.backdrop {
-		background-color: hsl(var(--brandHSL) / 1%);
-		backdrop-filter: blur(5px);
+		background-color: unset;
 	}
 
 	::selection {
