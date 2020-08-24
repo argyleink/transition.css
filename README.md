@@ -11,9 +11,14 @@
 </a>
 </p>
 
+**46 pre-built transitions!**  
+> Hands on at [Codepen](https://codepen.io/argyleink/pen/RwrzGJb) or preview all @ [transition.style](https://transition.style)
+
+<br>
 <br>
 
 ## Basics
+Import the CSS and set an attribute on some HTML:  
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
 
 ```html
@@ -24,10 +29,7 @@
 </div>
 ```
 
-Choose from **46 pre-built transitions!**  
-
-Hands on at [Codepen](https://codepen.io/argyleink/pen/RwrzGJb) or preview all 46 @ [transition.style](https://transition.style)
-
+<br>
 <br>
 
 ## Installation
