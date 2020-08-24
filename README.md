@@ -68,6 +68,8 @@ by importing only the custom properties and base styles:
 - create multi-part transitions
 - use classes or CSS-in-JS that leverage transition.css custom props
 
+[The Hackpack Sandbox](https://codepen.io/argyleink/pen/MWyJxLx)
+
 > Custom properties ship with each `.min.css` as well
   
 <br>
