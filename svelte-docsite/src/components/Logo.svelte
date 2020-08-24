@@ -1,4 +1,6 @@
 <script>
+  import {GithubSVG} from '../icons.js'
+
 	export let backdrop = false
 </script>
 
@@ -13,7 +15,14 @@
       </svg>
     </span>
   </h1>
-  <p>Drop-in CSS transitions</p>
+  <p>
+    <a class="github-link" href="https://github.com/argyleink/transition.css">
+      <svg viewbox="0 0 512 512">
+        {@html GithubSVG}
+      </svg>
+    </a>
+    Drop-in CSS transitions
+  </p>
 </header>
 
 <style>
@@ -64,10 +73,22 @@
   }
 
   p {
+    display: inline-flex;
+    gap: 1ch;
+    align-items: center;
     margin: 0;
     font-size: 1.5rem;
     font-weight: 200;
     color: var(--brand-alt);
+  }
+
+  .github-link {
+    display: inline-flex;
+  }
+
+  .github-link > svg {
+    inline-size: 3ch;
+    fill: var(--white);
   }
 
   @media (max-width: 720px) {
