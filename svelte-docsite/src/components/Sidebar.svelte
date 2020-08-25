@@ -41,6 +41,10 @@
     {/each}
   </select>
 
+  <a class="fork-on-github" href="https://github.com/you">
+    <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+  </a>
+
   <h3>Settings</h3>
   <h4>--transition__duration:</h4>
   <div>
@@ -176,6 +180,12 @@
 
   dl > dd > a:focus {
     outline: 1px dotted deeppink;
+  }
+
+  .fork-on-github {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .icon-break {
