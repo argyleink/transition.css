@@ -219,6 +219,7 @@
       font-size: 1.25rem;
       border: none;
       background: var(--white);
+      width: min(100%, 300px);
     }
   }
 

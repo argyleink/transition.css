@@ -107,4 +107,14 @@
       padding-block-start: 2ch;
     }
   }
+
+  @media (max-width: 400px) {
+    svg {
+      display: none;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 </style>
