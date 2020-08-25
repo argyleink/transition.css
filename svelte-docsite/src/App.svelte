@@ -31,13 +31,14 @@
 	<meta name="description" content="Drop-in CSS transitions">
 	
 	<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/283340971/9afb9500-d800-11ea-8cbc-d31543fdd009">
+	<meta name="twitter:image" content="https://repository-images.githubusercontent.com/283340971/9afb9500-d800-11ea-8cbc-d31543fdd009">
 	<meta name="twitter:site" content="@argyleink">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="argyleink/transition.css">
 	<meta name="twitter:description" content="Drop-in CSS transitions">
 	<meta property="og:image" content="https://repository-images.githubusercontent.com/283340971/9afb9500-d800-11ea-8cbc-d31543fdd009">
 	<meta property="og:site_name" content="transition.style">
-	<meta property="og:type" content="object">
+	<meta property="og:type" content="website">
 	<meta property="og:title" content="argyleink/transition.css">
 	<meta property="og:url" content="http://transition.style/">
 	<meta property="og:description" content="Drop-in CSS transitions">
