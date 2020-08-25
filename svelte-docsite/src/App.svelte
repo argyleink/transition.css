@@ -27,12 +27,12 @@
 <svelte:head>
 	<title>Transition.css - easy transitions with clip-path</title>
 	<link rel="stylesheet" href="https://unpkg.com/transition-style">
+	<meta content="text/html; charset=UTF-8" name="Content-Type" />
 	<meta name="theme-color" content="#498aeb">
 	<meta name="description" content="Drop-in CSS transitions">
 	
-	<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/283340971/9afb9500-d800-11ea-8cbc-d31543fdd009">
 	<meta name="twitter:image" content="https://repository-images.githubusercontent.com/283340971/9afb9500-d800-11ea-8cbc-d31543fdd009">
-	<meta name="twitter:site" content="@argyleink">
+	<meta name="twitter:creator" content="@argyleink">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="argyleink/transition.css">
 	<meta name="twitter:description" content="Drop-in CSS transitions">
