@@ -197,7 +197,7 @@
   }
 
   .icon-break {
-    margin-block: 3ch 2ch;
+    margin-block: 3ch;
   }
 
   .icon-break svg {
