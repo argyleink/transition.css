@@ -41,6 +41,8 @@
     {/each}
   </select>
 
+  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started ↗</a>
+
   <a class="fork-on-github" href="https://github.com/you">
     <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
   </a>
@@ -186,6 +188,12 @@
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .getting-started {
+    margin-block-end: 3ch;
+    font-weight: bold;
+    letter-spacing: .1em;
   }
 
   .icon-break {
