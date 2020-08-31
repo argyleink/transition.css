@@ -105,7 +105,7 @@
   svg {
     inline-size: 100%;
     max-block-size: 90vh;
-    fill: var(--white);
+    fill: var(--text);
   }
 
   nav {
