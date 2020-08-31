@@ -116,7 +116,7 @@
 	  background-color: hsl(var(--brandHSL) / 10%);
 	}
 
-	@media (max-width: 960px) {
+	@media (max-width: 1000px) {
 		main {
 			min-height: 100vh;
 		  grid: [stack] 1fr [sidebar] auto / [stack] 1fr;

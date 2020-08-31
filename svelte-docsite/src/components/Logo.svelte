@@ -93,16 +93,6 @@
     fill: var(--white);
   }
 
-  @media (max-width: 720px) {
-    h1 {
-      justify-content: center;
-    }
-
-    header {
-      text-align: center;
-    }
-  }
-
   @media (min-width: 720px) {
     header {
       padding-inline-start: 5ch;
@@ -111,12 +101,8 @@
   }
 
   @media (max-width: 400px) {
-    svg {
-      display: none;
-    }
-
     p {
-      font-size: 1rem;
+      font-size: 6vmin;
     }
   }
 </style>
