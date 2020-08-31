@@ -61,8 +61,10 @@
   }
 
   @media (prefers-color-scheme: light) {
-    .is-backdrop h1 {
+    .is-backdrop h1,
+    .is-backdrop svg {
       color: var(--text);
+      fill: var(--text);
     }
     
     .is-backdrop p,

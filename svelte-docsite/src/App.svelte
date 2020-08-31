@@ -47,7 +47,7 @@
 
 <style>
 	:root {
-	  --surface: hsl(0 0% 6%);
+	  --surface: hsl(208 50% 10%);
 		--surfaceHSL: 0 0% 6%;
 	  --text: hsl(0 0% 78%);
 	  --white: hsl(205 100% 94%);
@@ -58,12 +58,12 @@
 
 	@media (prefers-color-scheme: light) {
 		:root {
-			--surface: hsl(0 0% 100%);
+			--surface: hsl(216 80% 100%);
 			--surfaceHSL: 0 0% 100%;
-			--text: hsl(0 0% 27%);
+			--text: hsl(208 25% 35%);
 			--white: hsl(0 0% 100%);
-			--brand: hsl(216 80% 54%);
-			--brandHSL: 216 80% 54%;
+			--brand: hsl(216 60% 52%);
+			--brandHSL: 216 60% 52%;
 		}
 	}
 

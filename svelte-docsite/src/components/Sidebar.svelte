@@ -109,8 +109,6 @@
   }
 
   nav {
-    background: hsl(var(--surfaceHSL) / 80%);
-    backdrop-filter: blur(10px);
     display: flex;
     gap: 1ch;
     padding: 3ch;
