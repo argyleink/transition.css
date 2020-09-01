@@ -95,7 +95,6 @@
 
   @media (min-width: 720px) {
     header {
-      padding-inline-start: 5ch;
       padding-block-start: 2ch;
     }
   }
