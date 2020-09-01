@@ -7,7 +7,7 @@
   }
 }
 
-[transition="out:polygon:opposing-corners"] {
+[transition-style="out:polygon:opposing-corners"] {
   --transition__duration: 1.5s;
   animation-name: polygon-out-opposing-corners;
 }

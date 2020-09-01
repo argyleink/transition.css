@@ -10,6 +10,6 @@
   }
 }
 
-[transition="in:circle:hesitate"] {
+[transition-style="in:circle:hesitate"] {
   animation-name: circle-in-hesitate;
 }

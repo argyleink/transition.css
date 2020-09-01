@@ -7,6 +7,6 @@
   }
 }
 
-[transition="in:square:center"] {
+[transition-style="in:square:center"] {
   animation-name: square-in-center;
 }

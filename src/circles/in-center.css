@@ -7,6 +7,6 @@
   }
 }
 
-[transition="in:circle:center"] {
+[transition-style="in:circle:center"] {
   animation-name: circle-in-center;
 }

@@ -7,7 +7,7 @@
   }
 }
 
-[transition="in:wipe:top"],
-[transition="in:wipe:down"] {
+[transition-style="in:wipe:top"],
+[transition-style="in:wipe:down"] {
   animation-name: wipe-in-top;
 }

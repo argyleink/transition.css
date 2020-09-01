@@ -7,6 +7,6 @@
   }
 }
 
-[transition="in:circle:bottom-right"] {
+[transition-style="in:circle:bottom-right"] {
   animation-name: circle-in-bottom-right;
 }

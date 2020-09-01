@@ -7,6 +7,6 @@
   }
 }
 
-[transition="in:square:top-left"] {
+[transition-style="in:square:top-left"] {
   animation-name: square-in-top-left;
 }

@@ -7,7 +7,7 @@
   }
 }
 
-[transition="in:diamond:center"] {
+[transition-style="in:diamond:center"] {
   --transition__duration: 1.5s;
   animation-name: diamond-in-center;
 }

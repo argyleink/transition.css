@@ -7,6 +7,6 @@
   }
 }
 
-[transition="out:wipe:bottom-right"] {
+[transition-style="out:wipe:bottom-right"] {
   animation-name: wipe-out-bottom-right;
 }

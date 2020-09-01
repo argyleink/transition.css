@@ -7,6 +7,6 @@
   }
 }
 
-[transition="in:wipe:right"] {
+[transition-style="in:wipe:right"] {
   animation-name: wipe-in-right;
 }

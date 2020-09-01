@@ -10,7 +10,7 @@
   }
 }
 
-[transition="in:diamond:hesitate"] {
+[transition-style="in:diamond:hesitate"] {
   --transition__duration: 1.5s;
   animation-name: diamond-in-double-scale;
 }
