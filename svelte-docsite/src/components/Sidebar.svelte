@@ -1,5 +1,6 @@
 <script>
   import transitions from '../transitions.js'
+  import transitionsMap from '../transitions-map.js'
   import {transition, duration, easing} from '../store.js'
   import {GithubSVG} from '../icons.js'
 
@@ -20,7 +21,7 @@
     if (!navigator.clipboard) return
 
     try {
-      navigator.clipboard.writeText(text)
+      navigator.clipboard.writeText(transitionsMap[text])
     } 
     catch (err) {
       console.error('Failed to copy: ', err)
