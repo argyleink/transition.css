@@ -137,7 +137,7 @@
   }
 
   dl > dt {
-    color: deeppink;
+    color: var(--pink);
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -148,7 +148,7 @@
 
   dd[selected="true"] > a {
     text-decoration: underline;
-    text-decoration-color: deeppink;
+    text-decoration-color: var(--pink);
   }
 
   dl > dd {
@@ -162,7 +162,7 @@
 
   dl > dd:hover::after,
   dl > dd:focus-within::after {
-    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='deeppink' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
+    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='var(--pink)' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
     position: absolute;
     left: -1.75ch;
     inset: 0 0 0 -1.75ch;
@@ -179,7 +179,7 @@
   }
 
   dl > dd > a:focus {
-    outline: 1px dotted deeppink;
+    outline: 1px dotted var(--pink);
   }
 
   .fork-on-github {
@@ -235,6 +235,12 @@
 
     nav > h3:not(:first-of-type) {
       margin-block-start: 2ch;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    nav {
+      --pink: deeppink;
     }
   }
 </style>

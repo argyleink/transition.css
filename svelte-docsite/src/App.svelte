@@ -55,6 +55,7 @@
 	  --brand: hsl(208 46% 52%);
 		--brandHSL: 208 46% 52%;
 	  --brand-alt: hsl(205 100% 20%);
+		--pink: hsl(328 60% 58%);
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -66,6 +67,7 @@
 			--brand: hsl(216 60% 54%);
 			--brandHSL: 216 60% 54%;
 			--brand-alt: hsl(205 100% 86%);
+			--pink: deeppink;
 		}
 	}
 

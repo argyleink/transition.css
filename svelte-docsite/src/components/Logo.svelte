@@ -51,7 +51,7 @@
   }
 
   .is-backdrop h1 {
-    color: deeppink;
+    color: var(--pink);
   }
 
   .is-backdrop p,
@@ -70,7 +70,7 @@
     .is-backdrop p,
     .is-backdrop h1 > span:nth-child(2),
     .is-backdrop h1 > span:nth-child(3) {
-      color: deeppink;
+      color: var(--pink);
     }
   }
 
