@@ -91,11 +91,8 @@ After `transition.css` has been added to your project, add an attribute to an el
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
 
-<<<<<<< HEAD
 <br>
-=======
 Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple "transition in" classes are applied to an element? Transition.css chooses to default with a state machine approach so things like a classname collision doesn't need solved. See the [custom](#custom) section below for ways to use classes and/or the shape custom properties so transition.css can fit into your development environment. The built in attribute based approach is very easy to hack, customize and escape. 
->>>>>>> 5cc68bf (move to hyphen, breaking version change)
 
 #### Using `@keyframes`
 Each bundle ships with the `@keyframes` declared, and you can use them as you see fit. You can use these to build your own animations or just hook into the presets in your own way:
