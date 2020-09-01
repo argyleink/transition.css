@@ -30,7 +30,8 @@
 		<Logo backdrop=true/>
 	</section>
 
-	<section transition="{active_transition}" 
+	<section 
+		transition-style="{active_transition}" 
 		on:click={demoClick}
 		on:animationend={transitionFinished}
 		style="
@@ -77,7 +78,7 @@
 	  }
 	}
 
-	[transition="in:custom:circle-swoop"] {
+	[transition-style="in:custom:circle-swoop"] {
 	  --transition__duration: 5s;
 	  animation-name: circle-swoop;
 	}

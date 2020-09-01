@@ -10,6 +10,6 @@
   }
 }
 
-[transition="in:square:hesitate"] {
+[transition-style="in:square:hesitate"] {
   animation-name: square-in-hesitate;
 }

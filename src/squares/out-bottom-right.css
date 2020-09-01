@@ -7,7 +7,7 @@
   }
 }
 
-[transition="out:square:bottom-right"] {
+[transition-style="out:square:bottom-right"] {
   --transition__duration: 1.5s;
   animation-name: square-out-bottom-right;
 }

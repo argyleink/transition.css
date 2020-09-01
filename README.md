@@ -19,7 +19,7 @@
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
-<div transition="in:wipe:up">
+<div transition-style="in:wipe:up">
   👍
 </div>
 ```
@@ -66,18 +66,18 @@ Build [custom](#custom) `@keyframe` animations and MUCH more:
 After `transition.css` has been added to your project, add an attribute to an element and watch the magic:  
 
 ```html
-<div transition="in:circle:bottom-right">
+<div transition-style="in:circle:bottom-right">
   A transitioned IN element
 </div>
 
-<div transition="out:wipe:down">
+<div transition-style="out:wipe:down">
   A transitioned OUT element
 </div>
 ```
 
 > if nothing is happening when using the attributes, it's likely `transition.css` has not loaded
 
-Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple "transition in" classes are applied to an element? Transition.css chooses to default with a state machine approach. See the [custom](#custom) section below for ways to use classes and/or the custom properties, so transition.css can fit into your development environment. It's very flexible, the built in attribute based approach is very easy to hack and customize. 
+Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple "transition in" classes are applied to an element? Transition.css chooses to default with a state machine approach so things like a classname collision doesn't need solved. See the [custom](#custom) section below for ways to use classes and/or the shape custom properties so transition.css can fit into your development environment. The built in attribute based approach is very easy to hack, customize and escape. 
 
 Transition.css is very similar to [animate.css](https://animate.style). The docs they've made are excellent and show many examples of advanced usage of libraries like this. You'll notice `transition.css` is very inspired by `animate.css`.
 
@@ -109,7 +109,7 @@ Most of the built in transitions are from the center. Here's how you can set the
 Then, in the HTML:
 
 ```html
-<div transition class="... --in-custom">
+<div transition-style class="--in-custom">
   A custom transitioned element
 </div>
 ```
