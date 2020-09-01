@@ -16,12 +16,6 @@
 	function demoClick() {
 		active_transition = last_chosen
 	}
-
-	function transitionFinished() {
-		active_transition = active_transition.includes('out')
-			? active_transition.replace('out','in')
-			: ''
-	}
 </script>
 
 <main>
@@ -33,7 +27,6 @@
 	<section 
 		transition-style="{active_transition}" 
 		on:click={demoClick}
-		on:animationend={transitionFinished}
 		style="
 			--transition__duration: {$duration}s;
 			--transition__easing: {$ease};
