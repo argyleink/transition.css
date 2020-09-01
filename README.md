@@ -7,7 +7,7 @@
 
 <p align="center">
 <a href="https://transition.style" target="_blank">
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/kitchen-sink.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/gif/kitchen-sink.gif?raw=true" />
 </a>
 </p>
 
@@ -19,7 +19,7 @@
 
 ## Basics
 Import the CSS and set an attribute on some HTML:  
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/wipe-up.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/gif/wipe-up.gif?raw=true" />
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -73,7 +73,7 @@ by importing only the custom properties and base styles:
 > Custom properties ship with each `.min.css` as well
   
 <br>
-<img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
+<img src="https://github.com/argyleink/transition.css/blob/main/gif/opposing-corner-fold.gif?raw=true" />
 <br><br>
 
 ## Usage
