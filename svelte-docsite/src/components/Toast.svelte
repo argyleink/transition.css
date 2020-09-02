@@ -35,7 +35,8 @@
 <style>
   span {
     position: absolute;
-    z-index: 1;
+    left: 5px;
+    z-index: var(--layer-tooltip);
     background: var(--pink);
     color: var(--text);
     box-shadow: 0 5px 10px hsl(0 0% 0% / 50%);

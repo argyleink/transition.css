@@ -23,9 +23,7 @@
       copyToClipboard(txn)
 
       $toast.showing = true
-      const {x,y} = e.currentTarget.getBoundingClientRect()
-      $toast.x = x - 20
-      $toast.y = y - 35
+      $toast.y = e.currentTarget.parentElement.offsetTop - 35
     }
   }
 
@@ -133,6 +131,7 @@
     padding: 3ch;
     padding-block-end: 0;
     box-sizing: border-box;
+    position: relative;
   }
 
   nav > h3 {
@@ -206,7 +205,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: var(--layer-sticky);
   }
 
   .getting-started {
@@ -226,6 +225,7 @@
   .sticky-links {
     position: sticky;
     bottom: 0;
+    z-index: var(--layer-sticky);
 
     display: flex;
     flex-direction: column;
@@ -242,7 +242,7 @@
       inline-size: 100%;
       place-content: center;
       grid-area: stack;
-      z-index: 1;
+      z-index: var(--layer-surface);
       align-self: end;
     }
 
