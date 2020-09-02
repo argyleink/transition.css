@@ -50,7 +50,7 @@
 	:root {
 	  --surface: hsl(208 50% 10%);
 		--surfaceHSL: 0 0% 6%;
-	  --text: hsl(0 0% 78%);
+	  --text: hsl(208 25% 78%);
 	  --white: hsl(205 100% 94%);
 	  --brand: hsl(208 46% 52%);
 		--brandHSL: 208 46% 52%;
