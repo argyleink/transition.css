@@ -206,6 +206,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
   }
 
   .getting-started {
@@ -230,7 +231,8 @@
     flex-direction: column;
     align-items: start;
     gap: 1.5ch;
-    padding-block: 3ch;
+    padding: 3ch;
+    margin-inline: -3ch;
     background-color: var(--surface);
     border-top: 1px solid var(--brand);
   }
