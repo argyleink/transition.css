@@ -20,11 +20,11 @@
 	}
 
 	function transitionFinished() {
-		active_transition = ''
+		// active_transition = ''
 	}
 </script>
 
-<main>
+<main on:click={demoClick}>
 
 	<section class="backdrop">
 		<Logo backdrop=true/>
@@ -32,7 +32,6 @@
 
 	<section 
 		transition-style="{active_transition}" 
-		on:click={demoClick}
 		on:animationend={transitionFinished}
 		style="
 			--transition__duration: {$duration}s;
