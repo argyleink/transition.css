@@ -103,9 +103,11 @@
     </a>
   </div>
   
-  <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
-  <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
-  <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
+  <div class="sticky-links">
+    <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
+    <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
+    <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
+  </div>
 
   <Toast/>
 </nav>
@@ -129,6 +131,7 @@
     display: flex;
     gap: 1ch;
     padding: 3ch;
+    padding-block-end: 0;
     box-sizing: border-box;
   }
 
@@ -217,6 +220,17 @@
 
   .icon-break svg {
     max-inline-size: 5ch;
+  }
+
+  .sticky-links {
+    position: sticky;
+    bottom: 0;
+
+    display: grid;
+    gap: 2ch;
+    padding-block: 3ch;
+    background-color: var(--surface);
+    border-top: 1px solid var(--brand);
   }
 
   @media (max-width: 1000px) {
