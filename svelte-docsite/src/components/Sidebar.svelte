@@ -40,41 +40,61 @@
 </script>
 
 <nav>
-  <select bind:value={$transition} class="mobile-only">
-    {#each Object.entries(transitions) as [title, groupedByShape]}
-      {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
-        <optgroup label="{title} {direction}">
-        {#each groupedByDirection as txn}
-          <option>{txn}</option>
+  <div class="nav__transitions">
+    <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started ↗</a>
+
+    <a class="fork-on-github" href="https://github.com/argyleink/transition.css">
+      <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+    </a>
+
+    <h3>Settings</h3>
+    <h4>--transition__duration:</h4>
+    <div>
+      <select bind:value={$duration}>
+        {#each [0.5,0.75,1,1.5,2,2.5,3,4,5,6,7,10] as time}
+          <option value={time}>{time}s</option>  
         {/each}
-        </optgroup>
-      {/each}
+      </select>
+    </div>
+
+    <h4>--transition__easing:</h4>
+    <div>
+      <select bind:value={$easing}>
+        {#each easings as ez}
+          <option value={ez}>{ez}</option>  
+        {/each}
+      </select>
+    </div>
+
+    {#each Object.entries(transitions) as [title, groupedByShape]}
+      <h3>{title}</h3>
+      <dl>
+        {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
+          <dt>{direction}</dt>
+          {#each groupedByDirection as txn}
+            <dd selected={txn === transition}>
+              <a href="#{txn}" on:click={transitionClick}>{txn}</a>
+            </dd>
+          {/each}
+        {/each}
+      </dl>
     {/each}
-  </select>
-
-  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started ↗</a>
-
-  <a class="fork-on-github" href="https://github.com/argyleink/transition.css">
-    <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
-  </a>
-
-  <h3>Settings</h3>
-  <h4>--transition__duration:</h4>
-  <div>
-    <select bind:value={$duration}>
-      {#each [0.5,0.75,1,1.5,2,2.5,3,4,5,6,7,10] as time}
-        <option value={time}>{time}s</option>  
-      {/each}
-    </select>
   </div>
-
-  <h4>--transition__easing:</h4>
-  <div>
-    <select bind:value={$easing}>
-      {#each easings as ez}
-        <option value={ez}>{ez}</option>  
-      {/each}
-    </select>
+  <div class="nav__footer">
+    <div class="nav__footer__icon">
+      <div class="icon-break">
+        <a href="https://github.com/argyleink/transition.css">
+          <svg viewbox="0 0 512 512">
+            {@html GithubSVG}
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav__footer__links">
+      <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
+      <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
+      <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
+    </div>
   </div>
 
   {#each Object.entries(transitions) as [title, groupedByShape]}
@@ -127,12 +147,10 @@
 
   nav {
     display: flex;
-    gap: 1ch;
-    padding: 3ch;
     box-sizing: border-box;
   }
 
-  nav > h3 {
+  nav h3 {
     color: var(--brand);
     font-size: 2.5rem;
     text-transform: capitalize;
@@ -141,8 +159,8 @@
     text-decoration-color: var(--brand-alt);
   }
 
-  nav > h3,
-  nav > h4 {
+  nav h3,
+  nav h4 {
     margin: 0;
   }
 
@@ -231,29 +249,50 @@
     nav > *:not(.mobile-only) {
       display: none;
     }
-
-    nav > select {
-      font-size: 1.25rem;
-      border: none;
-      background: var(--white);
-      width: min(100%, 300px);
-    }
   }
 
   @media (min-width: 1000px) {
     nav {
       flex-direction: column;
       max-block-size: 100vh;
+      overflow-y: hidden;
+      background: var(--surface);
+    }
+
+    nav h3:not(:first-of-type) {
+      margin-block-start: 2ch;
+    }
+
+    .nav__transitions {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1ch;
+
+      padding: 3ch;
       overflow-y: auto;
       overscroll-behavior-y: none;
     }
 
-    nav > .mobile-only {
-      display: none;
+    
+    .nav__footer {
+      flex: 0 0 auto;
+
+      display: flex;
+
+      border-top: 1px solid #fff6;
     }
 
-    nav > h3:not(:first-of-type) {
-      margin-block-start: 2ch;
+    .nav__footer__icon,
+    .nav__footer__links {
+      padding: 1.5ch;
+    }
+
+    .nav__footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 1ch;
     }
   }
 
