@@ -15,7 +15,6 @@
 
 {#if $toast.showing}
   <span 
-    id="toasty" 
     in:scale="{{ 
       duration: 2000, 
       easing: elasticOut,
