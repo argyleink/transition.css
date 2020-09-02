@@ -306,19 +306,103 @@ export default {
   animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-top-right both;
 }`.trim(),
 
-'out:square:top-left': null,
+'out:square:top-left': `
+@keyframes square-out-top-left {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 100% 100% 0);
+  }
+}
 
-'out:square:bottom-right': null,
+[transition-style="out:square:top-left"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-top-left both;
+}`.trim(),
 
-'out:square:bottom-left': null,
+'out:square:bottom-right': `
+@keyframes square-out-bottom-right {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(100% 0 0 100%);
+  }
+}
 
-'in:wipe:right': null,
+[transition-style="out:square:bottom-right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-bottom-right both;
+}`.trim(),
 
-'in:wipe:left': null,
+'out:square:bottom-left': `
+@keyframes square-out-bottom-left {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(100% 100% 0 0);
+  }
+}
 
-'in:wipe:up': null,
+[transition-style="out:square:bottom-left"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-bottom-left both;
+}`.trim(),
 
-'in:wipe:down': null,
+'in:wipe:right': `
+@keyframes wipe-in-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+}`.trim(),
+
+'in:wipe:left': `
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:left"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-left both;
+}`.trim(),
+
+'in:wipe:up': `
+@keyframes wipe-in-up {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:up"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
+}`.trim(),
+
+'in:wipe:down': `
+@keyframes wipe-in-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:down"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+}`.trim(),
 
 'in:wipe:top-right': null,
 

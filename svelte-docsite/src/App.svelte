@@ -14,7 +14,13 @@
 	})
 
 	function demoClick() {
-		active_transition = last_chosen
+		active_transition = ''
+		requestAnimationFrame(()=>
+			active_transition = last_chosen)
+	}
+
+	function transitionFinished() {
+		active_transition = ''
 	}
 </script>
 
@@ -27,6 +33,7 @@
 	<section 
 		transition-style="{active_transition}" 
 		on:click={demoClick}
+		on:animationend={transitionFinished}
 		style="
 			--transition__duration: {$duration}s;
 			--transition__easing: {$ease};
@@ -108,8 +115,8 @@
 		background-color: unset;
 	}
 
-	::selection {
-	  background-color: hsl(var(--brandHSL) / 10%);
+	:global(::selection) {
+	  background-color: hsl(328 60% 58% / 40%);
 	}
 
 	@media (max-width: 1000px) {
