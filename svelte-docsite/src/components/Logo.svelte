@@ -1,6 +1,4 @@
 <script>
-  import transitions from '../transitions.js'
-  import {transition} from '../store.js'
   import {GithubSVG} from '../icons.js'
 
 	export let backdrop = false
@@ -25,18 +23,6 @@
     </a>
     Drop-in CSS transitions
   </p>
-
-  <select bind:value={$transition} class="mobile-only">
-    {#each Object.entries(transitions) as [title, groupedByShape]}
-      {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
-        <optgroup label="{title} {direction}">
-        {#each groupedByDirection as txn}
-          <option>{txn}</option>
-        {/each}
-        </optgroup>
-      {/each}
-    {/each}
-  </select>
 </header>
 
 <style>
@@ -88,20 +74,6 @@
     }
   }
 
-  header {
-    display: grid;
-    gap: 1.5ch;
-    justify-content: flex-start;
-  }
-
-  select {
-    width: min(100%, 300px);
-    margin: 3rem auto;
-    border: none;
-    font-size: 1.25rem;
-    background: var(--white);
-  }
-
   p {
     display: inline-flex;
     gap: 1ch;
@@ -130,11 +102,6 @@
   @media (max-width: 400px) {
     p {
       font-size: 6vmin;
-    }
-  }
-  @media (min-width: 1000px) {
-    select {
-      display: none;
     }
   }
 </style>
