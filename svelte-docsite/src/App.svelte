@@ -24,14 +24,15 @@
 	}
 </script>
 
-<main on:click={demoClick}>
+<main>
 
-	<section class="backdrop">
+	<section class="backdrop" on:click={demoClick}>
 		<Logo backdrop=true/>
 	</section>
 
 	<section 
 		transition-style="{active_transition}" 
+		on:click={demoClick}
 		on:animationend={transitionFinished}
 		style="
 			--transition__duration: {$duration}s;
