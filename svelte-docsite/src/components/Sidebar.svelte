@@ -1,7 +1,8 @@
 <script>
+  import Toast from './Toast.svelte'
   import transitions from '../transitions.js'
   import transitionsMap from '../transitions-map.js'
-  import {transition, duration, easing} from '../store.js'
+  import {transition, duration, easing, toast} from '../store.js'
   import {GithubSVG} from '../icons.js'
 
   const easings = [
@@ -17,17 +18,23 @@
     $transition = ''
 		requestAnimationFrame(()=>
       $transition = txn)
-    copyToClipboard($transition)
+
+    if (navigator.clipboard) {
+      copyToClipboard(txn)
+
+      $toast.showing = true
+      const {x,y} = e.currentTarget.getBoundingClientRect()
+      $toast.x = x - 20
+      $toast.y = y - 35
+    }
   }
 
-  function copyToClipboard(text) {
-    if (!navigator.clipboard) return
-
+  async function copyToClipboard(text) {
     try {
-      navigator.clipboard.writeText(transitionsMap[text])
+      return navigator.clipboard.writeText(transitionsMap[text])
     } 
     catch (err) {
-      console.error('Failed to copy: ', err)
+      return Promise.reject(err)
     }
   }
 </script>
@@ -77,7 +84,11 @@
         <dt>{direction}</dt>
         {#each groupedByDirection as txn}
           <dd selected={txn === transition}>
-            <a href="#{txn}" on:click={transitionClick}>{txn}</a>
+            <a 
+              href="#{txn}" 
+              title="Click to copy CSS!"
+              on:click={transitionClick} 
+            >{txn}</a>
           </dd>
         {/each}
       {/each}
@@ -95,6 +106,8 @@
   <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
   <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
   <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
+
+  <Toast/>
 </nav>
 
 <style>
@@ -103,7 +116,7 @@
   }
 
   a:hover {
-    color: var(--brand);
+    color: var(--pink);
   }
 
   svg {
