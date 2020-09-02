@@ -226,8 +226,10 @@
     position: sticky;
     bottom: 0;
 
-    display: grid;
-    gap: 2ch;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5ch;
     padding-block: 3ch;
     background-color: var(--surface);
     border-top: 1px solid var(--brand);
