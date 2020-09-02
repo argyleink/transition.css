@@ -221,9 +221,11 @@
 
   @media (max-width: 1000px) {
     nav {
-      background: var(--brand);
       inline-size: 100%;
       place-content: center;
+      grid-area: stack;
+      z-index: 1;
+      align-self: end;
     }
 
     nav > *:not(.mobile-only) {
