@@ -30,8 +30,8 @@
 		transition-style="{active_transition}" 
 		on:click={demoClick}
 		style="
-			--transition__duration: {$duration}s;
-			--transition__easing: {$ease};
+			--transition__duration: {$duration === 2.5 ? '' : $duration+'s'};
+			--transition__easing: {$ease === 'cubic-bezier(.25, 1, .30, 1)' ? '' : $ease};
 		"
 	>
 		<Logo/>
