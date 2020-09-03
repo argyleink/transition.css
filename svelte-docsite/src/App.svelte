@@ -105,7 +105,6 @@
     inline-size: 100%;
     max-block-size: 100vh;
     overflow: hidden;
-
     display: grid;
     place-content: center;
 	}
@@ -121,8 +120,7 @@
 	@media (max-width: 1000px) {
 		main {
 			min-height: 100vh;
-		  grid: [stack] 1fr [sidebar] auto / [stack] 1fr;
-		  background-position: 0 calc(100vh - 19ch);
+		  grid: [stack] 100vh [sidebar] auto / [stack] 1fr;
 		}
 
 		main > section {

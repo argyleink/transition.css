@@ -57,7 +57,29 @@
   .is-backdrop p,
   .is-backdrop h1 > span:nth-child(2),
   .is-backdrop h1 > span:nth-child(3) {
-    color: white;
+    color: var(--white);
+  }
+
+  p {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--brand-alt);
+  }
+
+  .github-link {
+    display: inline-flex;
+    margin-left: -8px;
+    margin-right: 1ch;
+    margin-inline: -8px 1ch;
+  }
+
+  .github-link > svg {
+    inline-size: 4ch;
+    block-size: 4ch;
+    fill: var(--white);
   }
 
   @media (prefers-color-scheme: light) {
@@ -74,27 +96,9 @@
     }
   }
 
-  p {
-    display: inline-flex;
-    gap: 1ch;
-    align-items: center;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 200;
-    color: var(--brand-alt);
-  }
-
-  .github-link {
-    display: inline-flex;
-  }
-
-  .github-link > svg {
-    inline-size: 3ch;
-    fill: var(--white);
-  }
-
   @media (min-width: 720px) {
     header {
+      padding-top: 2ch;
       padding-block-start: 2ch;
     }
   }

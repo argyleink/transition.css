@@ -37,20 +37,20 @@
   }
 </script>
 
-<nav>
-  <select bind:value={$transition} class="mobile-only">
-    {#each Object.entries(transitions) as [title, groupedByShape]}
-      {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
-        <optgroup label="{title} {direction}">
-        {#each groupedByDirection as txn}
-          <option>{txn}</option>
-        {/each}
-        </optgroup>
+<select bind:value={$transition} class="mobile-only">
+  {#each Object.entries(transitions) as [title, groupedByShape]}
+    {#each Object.entries(groupedByShape) as [direction, groupedByDirection]}
+      <optgroup label="{title} {direction}">
+      {#each groupedByDirection as txn}
+        <option>{txn}</option>
       {/each}
+      </optgroup>
     {/each}
-  </select>
+  {/each}
+</select>
 
-  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started ↗</a>
+<nav>
+  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started</a>
 
   <a class="fork-on-github" href="https://github.com/argyleink/transition.css">
     <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
@@ -102,9 +102,9 @@
   </div>
   
   <div class="sticky-links">
-    <a href="https://github.com/argyleink/transition.css#custom">Documentation ↗</a>
-    <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition ↗</a>
-    <a href="https://github.com/argyleink/transition.css">Contribute ↗</a>
+    <a href="https://github.com/argyleink/transition.css#custom">Documentation</a>
+    <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition</a>
+    <a href="https://github.com/argyleink/transition.css">Contribute</a>
   </div>
 
   <Toast/>
@@ -126,9 +126,10 @@
   }
 
   nav {
-    display: flex;
+    display: grid;
     gap: 1ch;
     padding: 3ch;
+    padding-bottom: 0;
     padding-block-end: 0;
     box-sizing: border-box;
     position: relative;
@@ -201,6 +202,16 @@
     outline: 1px dotted var(--pink);
   }
 
+  select {
+    font-size: 1.25rem;
+    border: none;
+    background: var(--white);
+    margin: 0;
+    grid-area: stack;
+    align-self: end;
+    z-index: var(--layer-sticky);
+  }
+
   .fork-on-github {
     position: absolute;
     top: 0;
@@ -209,12 +220,15 @@
   }
 
   .getting-started {
+    margin-bottom: 3ch;
     margin-block-end: 3ch;
     font-weight: bold;
     letter-spacing: .1em;
   }
 
   .icon-break {
+    margin-top: 3ch;
+    margin-bottom: 3ch;
     margin-block: 3ch;
   }
 
@@ -223,15 +237,13 @@
   }
 
   .sticky-links {
-    position: sticky;
-    bottom: 0;
-    z-index: var(--layer-sticky);
-
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 1.5ch;
     padding: 3ch;
+    margin-left: -3ch;
+    margin-right: -3ch;
     margin-inline: -3ch;
     background-color: var(--surface);
     border-top: 1px solid var(--brand);
@@ -240,21 +252,35 @@
   @media (max-width: 1000px) {
     nav {
       inline-size: 100%;
-      place-content: center;
-      grid-area: stack;
+      place-items: center;
       z-index: var(--layer-surface);
-      align-self: end;
+      padding-top: 3ch;
+      padding-bottom: 3ch;
+      padding-block: 3ch;
+      font-size: 1.5rem;
     }
 
-    nav > *:not(.mobile-only) {
+    nav > *:not(.mobile-only):not(.sticky-links):not(.icon-break) {
       display: none;
     }
 
-    nav > select {
-      font-size: 1.25rem;
-      border: none;
-      background: var(--white);
+    select {
       width: min(100%, 300px);
+      grid-area: stack;
+      align-self: end;
+      z-index: var(--layer-sticky);
+      justify-self: center;
+      margin-bottom: 3ch;
+      margin-block-end: 3ch;
+    }
+
+    .icon-break svg {
+      max-inline-size: 10ch;
+    }
+
+    .sticky-links {
+      padding-block-end: 0;
+      align-items: center;
     }
   }
 
@@ -266,12 +292,19 @@
       overscroll-behavior-y: none;
     }
 
-    nav > .mobile-only {
+    .mobile-only {
       display: none;
     }
 
     nav > h3:not(:first-of-type) {
+      margin-top: 2ch;
       margin-block-start: 2ch;
+    }
+
+    .sticky-links {
+      position: sticky;
+      bottom: 0;
+      z-index: var(--layer-sticky);
     }
   }
 
