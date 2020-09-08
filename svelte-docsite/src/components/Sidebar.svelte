@@ -204,7 +204,6 @@
 
   select {
     font-size: 1.25rem;
-    border: none;
     background: var(--white);
     margin: 0;
     grid-area: stack;
