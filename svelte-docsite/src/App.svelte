@@ -117,7 +117,7 @@
 	  background-color: hsl(328 60% 58% / 40%);
 	}
 
-	@media (max-width: 1000px) {
+	@media (orientation: portrait) and (max-width: 1100px) {
 		main {
 			min-height: 100vh;
 		  grid: [stack] 100vh [sidebar] auto / [stack] 1fr;

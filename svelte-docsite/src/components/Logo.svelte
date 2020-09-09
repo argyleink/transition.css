@@ -108,4 +108,10 @@
       font-size: 6vmin;
     }
   }
+
+  @media (orientation: landscape) and (max-width: 1000px) {
+    h1 {
+      font-size: min(10vmin, 7rem);
+    }
+  }
 </style>

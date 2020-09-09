@@ -248,7 +248,7 @@
     border-top: 1px solid var(--brand);
   }
 
-  @media (max-width: 1000px) {
+  @media (orientation: portrait) and (max-width: 1100px) {
     nav {
       inline-size: 100%;
       place-items: center;
@@ -290,7 +290,7 @@
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (orientation: landscape), (min-width: 1000px) {
     nav {
       flex-direction: column;
       max-block-size: 100vh;
@@ -311,6 +311,22 @@
       position: sticky;
       bottom: 0;
       z-index: var(--layer-sticky);
+    }
+  }
+
+  @media (orientation: landscape) and (max-width: 1000px) {
+    nav > h3:not(:first-of-type) {
+      margin-top: 1ch;
+      margin-block-start: 1ch;
+    }
+
+    dl > dd {
+      font-size: 1.1rem;
+    }
+
+    .sticky-links {
+      padding: 2ch;
+      gap: 1ch;
     }
   }
 
