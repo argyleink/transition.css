@@ -273,13 +273,20 @@
       margin-block-end: 3ch;
     }
 
+    .icon-break {
+      margin-top: 0;
+      margin-bottom: 1ch;
+      margin-block: 0 1ch;
+    }
+
     .icon-break svg {
-      max-inline-size: 10ch;
+      max-inline-size: 5ch;
     }
 
     .sticky-links {
       padding-block-end: 0;
       align-items: center;
+      font-size: 1.25rem;
     }
   }
 
