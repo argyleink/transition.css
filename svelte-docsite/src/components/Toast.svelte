@@ -25,7 +25,7 @@
     on:introend={toastFinished}
     style="
       top: {$toast.y}px;
-      left: {$toast.x}px;
+      left: {$toast.x + 16}px;
     "
   >
     CSS copied!
