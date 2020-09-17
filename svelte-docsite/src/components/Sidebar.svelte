@@ -14,17 +14,20 @@
   ]
 
   function transitionClick(e) {
-    const txn = e.currentTarget.textContent
+    const txn = e.currentTarget
     $transition = ''
-		requestAnimationFrame(()=>
-      $transition = txn)
+    $toast.showing = false
 
-    if (navigator.clipboard) {
-      copyToClipboard(txn)
+		requestAnimationFrame(() => {
+      $transition = txn.textContent
 
-      $toast.showing = true
-      $toast.y = e.currentTarget.parentElement.offsetTop - 35
-    }
+      if (navigator.clipboard) {
+        copyToClipboard(txn.textContent)
+
+        $toast.showing = true
+        $toast.y = txn.parentElement.offsetTop - 35
+      }
+    })
   }
 
   async function copyToClipboard(text) {
