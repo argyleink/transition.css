@@ -3,7 +3,7 @@
   import transitions from '../transitions.js'
   import transitionsMap from '../transitions-map.js'
   import {transition, duration, easing, toast} from '../store.js'
-  import {GithubSVG} from '../icons.js'
+  import {GithubSVG, DocsSVG, SuggestSVG, ContributeSVG} from '../icons.js'
 
   const easings = [
     'ease-in',
@@ -53,7 +53,9 @@
 </select>
 
 <nav>
-  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">Get Started</a>
+  <a class="getting-started" href="https://github.com/argyleink/transition.css#basics">
+    Get Started
+  </a>
 
   <a class="fork-on-github" href="https://github.com/argyleink/transition.css">
     <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
@@ -105,9 +107,24 @@
   </div>
   
   <div class="sticky-links">
-    <a href="https://github.com/argyleink/transition.css#custom">Documentation</a>
-    <a href="https://github.com/argyleink/transition.css/issues/new">Suggest a transition</a>
-    <a href="https://github.com/argyleink/transition.css">Contribute</a>
+    <a href="https://github.com/argyleink/transition.css#custom">
+      Documentation
+      <svg viewbox="0 0 20 20">
+        {@html DocsSVG}
+      </svg>
+    </a>
+    <a href="https://github.com/argyleink/transition.css/issues/new">
+      Suggest a transition
+      <svg viewbox="0 0 20 20">
+        {@html SuggestSVG}
+      </svg>
+    </a>
+    <a href="https://github.com/argyleink/transition.css">
+      Contribute
+      <svg viewbox="0 0 20 20">
+        {@html ContributeSVG}
+      </svg>
+    </a>
   </div>
 
   <Toast/>
@@ -119,13 +136,11 @@
   }
 
   a:hover {
-    color: var(--pink);
+    color: var(--high-contrast);
   }
 
   svg {
-    inline-size: 100%;
-    max-block-size: 90vh;
-    fill: var(--text);
+    fill: var(--high-contrast);
   }
 
   nav {
@@ -175,7 +190,6 @@
   }
 
   dl > dd {
-    cursor: pointer;
     position: relative;
     font-size: 1.3rem;
     font-weight: 300;
@@ -183,14 +197,14 @@
     margin: 0;
   }
 
-  dl > dd:hover::after,
-  dl > dd:focus-within::after {
+  dl a:hover::after,
+  dl a:focus-within::after {
     content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='deeppink' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
     position: absolute;
     left: -1.75ch;
     inset: 0 0 0 -1.75ch;
-    block-size: .75em;
-    inline-size: .75em;
+    block-size: 1.25ch;
+    inline-size: 1.25ch;
   }
 
   dl > dd > a {
@@ -198,7 +212,7 @@
   }
 
   dl > dd > a:hover {
-    color: var(--brand);
+    color: var(--high-contrast);
   }
 
   dl > dd > a:focus {
@@ -243,12 +257,23 @@
     flex-direction: column;
     align-items: start;
     gap: 1.5ch;
-    padding: 3ch;
+    padding: 2ch 3ch;
+    padding-block: 2ch;
     margin-left: -3ch;
     margin-right: -3ch;
     margin-inline: -3ch;
     background-color: var(--surface);
     border-top: 1px solid var(--brand);
+  }
+
+  .sticky-links > a {
+    display: flex;
+    place-items: center;
+    gap: 1ch;
+  }
+
+  .sticky-links > a > svg {
+    block-size: 2ch;
   }
 
   @media (orientation: portrait) and (max-width: 1100px) {

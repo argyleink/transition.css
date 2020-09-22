@@ -51,6 +51,7 @@
 		--brandHSL: 208 46% 52%;
 	  --brand-alt: hsl(205 100% 20%);
 		--pink: hsl(328 60% 58%);
+		--high-contrast: hsl(205 100% 96%);
 
 		--layer-surface: 1;
 		--layer-tooltip: 2;
@@ -67,6 +68,7 @@
 			--brandHSL: 216 60% 54%;
 			--brand-alt: hsl(205 100% 86%);
 			--pink: deeppink;
+			--high-contrast: hsl(205 100% 10%);
 		}
 	}
 
