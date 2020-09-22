@@ -13,12 +13,14 @@
 
 const postcssImport = require('postcss-import')
 const cssnano       = require('cssnano')
+const autoprefixer  = require('autoprefixer')
 
 module.exports = {
   plugins: [
     postcssImport({
       path: 'src/index.css',
     }),
+    autoprefixer(),
     cssnano({
       preset: 'default'
     }),
