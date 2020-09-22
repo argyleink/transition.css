@@ -32,7 +32,11 @@
       left: {$toast.x + 16}px;
     "
   >
-    CSS copied!
+    <svg viewBox="0 0 20 20" fill="currentColor">
+      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+      <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+    </svg>
+    CSS copied
   </span>
 {/if}
 
@@ -41,10 +45,15 @@
     position: absolute;
     left: 5px;
     z-index: var(--layer-tooltip);
+
+    display: flex;
+    place-items: center;
+    gap: .5ch;
     background: var(--pink);
-    color: hsl(328 100% 98%);
+    color: var(--white);
     box-shadow: 0 5px 10px hsl(328 50% 30% / 50%);
-    padding: .5ch 1ex;
+    text-shadow: 0 1px 0 hsl(328 50% 30%);
+    padding: .5ch 1ch;
     border-radius: .5ex;
   }
 
@@ -57,5 +66,10 @@
     left: calc(50% - 8px);
     background-color: var(--pink);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+
+  svg {
+    block-size: 2ch;
+    filter: drop-shadow(0 1px 0 hsl(328 50% 30%));
   }
 </style>
