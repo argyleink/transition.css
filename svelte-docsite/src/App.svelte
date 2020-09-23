@@ -14,9 +14,9 @@
 	})
 
 	function demoClick() {
-		active_transition = ''
-		requestAnimationFrame(()=>
-			active_transition = last_chosen)
+		active_transition = active_transition.includes('out')	
+			? active_transition.replace('out','in')	
+			: active_transition.replace('in','out')
 	}
 </script>
 
