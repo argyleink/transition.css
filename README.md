@@ -18,7 +18,7 @@
 <br>
 
 ## Basics
-Import the CSS and set an attribute on some HTML:  
+Import the CSS and set an attribute on some HTML: [try on Codepen](https://codepen.io/argyleink/pen/QWNRXEG)  
 <img src="https://github.com/argyleink/transition.css/blob/main/gif/wipe-up.gif?raw=true" />
 
 ```html
