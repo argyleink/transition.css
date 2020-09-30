@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-<a href="https://transition.style" target="_blank">
+<a href="https://codepen.io/argyleink/pen/zYqYpEB" target="_blank">
 <img src="https://github.com/argyleink/transition.css/blob/main/gif/kitchen-sink.gif?raw=true" />
 </a>
 </p>
