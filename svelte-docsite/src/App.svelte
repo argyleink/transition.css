@@ -72,7 +72,7 @@
 		}
 	}
 
-	@keyframes circle-swoop {
+	@keyframes in-circle-swoop {
 	  from {
 	    clip-path: var(--circle-top-right-out);
 	  }
@@ -81,9 +81,24 @@
 	  }
 	}
 
+	@keyframes out-circle-swoop {
+	  from {
+	    clip-path: var(--circle-bottom-right-in);
+	  }
+	  to {
+	    clip-path: var(--circle-top-right-out);
+	  }
+	}
+
 	[transition-style="in:custom:circle-swoop"] {
 	  --transition__duration: 5s;
-	  animation-name: circle-swoop;
+	  animation-name: in-circle-swoop;
+	}
+
+	[transition-style="out:custom:circle-swoop"] {
+	  --transition__duration: 1.25s;
+		--transition__easing: cubic-bezier(.30, 1, .25, 1);
+	  animation-name: out-circle-swoop;
 	}
 
 	:global(body) {

@@ -72,6 +72,7 @@ export default {
   custom: {
     entrances: [
       'in:custom:circle-swoop',
+      'out:custom:circle-swoop',
     ]
   }
 }
