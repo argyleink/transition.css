@@ -160,11 +160,16 @@
     font-weight: lighter;
     text-decoration: underline;
     text-decoration-color: var(--brand-alt);
+    text-decoration-style: wavy;
   }
 
   nav > h3,
   nav > h4 {
     margin: 0;
+  }
+
+  nav > h3 {
+    margin-block-end: .25ch;
   }
 
   dl {
