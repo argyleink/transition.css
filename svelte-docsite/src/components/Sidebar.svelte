@@ -226,7 +226,6 @@
 
   select {
     font-size: 1.25rem;
-    background: var(--white);
     margin: 0;
     grid-area: stack;
     align-self: end;
