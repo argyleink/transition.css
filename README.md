@@ -66,7 +66,7 @@ import 'transition-style';
 by importing only the custom properties and base styles:
 - compose custom transition combinations
 - create multi-part transitions
-- use classes or CSS-in-JS that leverage transition.css custom props
+- bring your own architecture with classes or CSS-in-JS or anything!
 
 [The Hackpack Sandbox](https://codepen.io/argyleink/pen/MWyJxLx)
 
