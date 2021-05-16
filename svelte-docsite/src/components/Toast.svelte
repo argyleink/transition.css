@@ -1,19 +1,24 @@
 <script>
   import {fade,scale} from 'svelte/transition'
   import {elasticOut} from 'svelte/easing'
-  import {writable} from 'svelte/store'
   import {toast} from '../store.js'
+
+  export let position
 
   const LINGER_TIME = 2e3
   let temp_timeout
+  let default_msg = 'CSS copied'
 
-  const introstart = (node, params) =>
+  const introstart = (node, params) => {
+    $toast.showing = true
     clearTimeout(temp_timeout)
+  }
 
   const introend = (node, params) =>
-    temp_timeout = setTimeout(() =>
+    temp_timeout = setTimeout(() => {
       $toast.showing = false
-    , LINGER_TIME)
+      $toast.message = default_msg
+    }, LINGER_TIME)
 </script>
 
 {#if $toast.showing}
@@ -30,19 +35,20 @@
     style="
       top: {$toast.y}px;
       left: {$toast.x + 16}px;
+      {position ? '--position: ' + position + ';' : ''}
     "
   >
     <svg viewBox="0 0 20 20" fill="currentColor">
       <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
       <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
     </svg>
-    CSS copied
+    {$toast.message || 'CSS copied'}
   </span>
 {/if}
 
 <style>
   span {
-    position: absolute;
+    position: var(--position, absolute);
     left: 5px;
     z-index: var(--layer-tooltip);
 
@@ -71,5 +77,11 @@
   svg {
     block-size: 2ch;
     filter: drop-shadow(0 1px 0 hsl(328 50% 30%));
+  }
+
+  @media (orientation: portrait) and (max-width: 1100px) {
+    span {
+      display: none;
+    }
   }
 </style>

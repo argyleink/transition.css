@@ -54,8 +54,8 @@
 		--high-contrast: hsl(205 100% 96%);
 
 		--layer-surface: 1;
-		--layer-tooltip: 2;
-		--layer-sticky: 3;
+		--layer-sticky: 2;
+		--layer-tooltip: 3;
 	}
 
 	@media (prefers-color-scheme: light) {

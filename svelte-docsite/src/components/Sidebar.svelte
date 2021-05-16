@@ -1,10 +1,11 @@
 <script>
   import Toast from './Toast.svelte'
+  import Bookmarklet from './Bookmarklet.svelte'
   import transitions from '../transitions.js'
   import transitionsMap from '../transitions-map.js'
   import {transition, duration, easing, toast} from '../store.js'
   import {GithubSVG, DocsSVG, SuggestSVG, ContributeSVG} from '../icons.js'
-
+  
   const easings = [
     'ease-in',
     'ease-out',
@@ -13,10 +14,14 @@
     'cubic-bezier(.25, 1, .30, 1)',
   ]
 
+  let toastPosition = 'fixed'
+
   function transitionClick(e) {
     const txn = e.currentTarget
     $transition = ''
     $toast.showing = false
+    $toast.message = 'CSS copied'
+    toastPosition = 'absolute'
 
 		requestAnimationFrame(() => {
       $transition = txn.textContent
@@ -25,6 +30,7 @@
         copyToClipboard(txn.textContent)
 
         $toast.showing = true
+        $toast.x = 0
         $toast.y = txn.parentElement.offsetTop - 35
       }
     })
@@ -125,9 +131,10 @@
         {@html ContributeSVG}
       </svg>
     </a>
+    <Bookmarklet bind:toastPosition={toastPosition}></Bookmarklet>
   </div>
 
-  <Toast/>
+  <Toast position={toastPosition}/>
 </nav>
 
 <style>
