@@ -662,4 +662,35 @@ export default {
   animation: 1.5s cubic-bezier(.25, 1, .30, 1) polygon-out-opposing-corners both;
 }`.trim(),
 
+'in:custom:circle-swoop': `
+@keyframes in-circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition-style="in:custom:circle-swoop"] {
+  --transition__duration: 5s;
+  animation-name: in-circle-swoop;
+}`.trim(),
+
+'out:custom:circle-swoop': `
+@keyframes out-circle-swoop {
+  from {
+    clip-path: var(--circle-bottom-right-in);
+  }
+  to {
+    clip-path: var(--circle-top-right-out);
+  }
+}
+
+[transition-style="out:custom:circle-swoop"] {
+  --transition__duration: 1.25s;
+  --transition__easing: cubic-bezier(.30, 1, .25, 1);
+  animation-name: out-circle-swoop;
+}`.trim(),
+
 }
