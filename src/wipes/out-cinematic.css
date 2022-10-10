@@ -1,0 +1,15 @@
+@keyframes wipe-cinematic-out {
+  0% {
+    clip-path: var(--wipe-in);
+  }
+  30%, 70% {
+    clip-path: var(--wipe-cinematic-mid);
+  }
+  100% {
+    clip-path: var(--wipe-cinematic-out);
+  }
+}
+
+[transition-style="out:wipe:cinematic"] {
+  animation-name: wipe-cinematic-out;
+}

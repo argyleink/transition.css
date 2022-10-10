@@ -14,4 +14,7 @@
   --wipe-top-right-out: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
   --wipe-bottom-left-out: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
   --wipe-bottom-right-out: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
+
+  --wipe-cinematic-out: inset(100% 0 100% 0);
+  --wipe-cinematic-mid: inset(10% 0 10% 0);
 }
