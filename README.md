@@ -57,7 +57,25 @@ Build [custom](#custom) `@keyframe` animations and MUCH more:
 - use classes (make your own BEM convention) or integrate in your CSS-in-JS architecture or front end framework
 
 > Custom properties ship with each `.min.css` as well
-  
+
+<br>
+
+### 🔗 Bookmarklet
+
+Try transition.css on almost any _existing_ site! Just copy 📋 the following, create a new bookmark, and paste in the URL:
+
+```js
+javascript:(function(){var a=document.createElement("link");a.rel="stylesheet";a.href="https://unpkg.com/transition-style";document.head.append(a);})();
+```
+
+You can now go to a website and click the bookmark to try it out! Animations automatically run when you manually add classes in dev tools, or run code like this in the console:
+
+```js
+$('body').setAttribute('transition-style','in:circle:bottom-right')
+```
+
+Caveat: this bookmarklet doesn't work on websites that have a strict CSP set up.
+
 <br>
 <img src="https://github.com/argyleink/transition.css/blob/main/demo/opposing-corner-fold.gif?raw=true" />
 <br>
