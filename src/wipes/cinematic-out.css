@@ -10,6 +10,6 @@
     }
   }
 
-[transition-style="cinematic:wipe:out"] {
+[transition-style="out:wipe:cinematic"] {
   animation-name: wipe-cinematic-out;
 }
