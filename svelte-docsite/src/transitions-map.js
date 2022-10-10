@@ -693,4 +693,38 @@ export default {
   animation-name: out-circle-swoop;
 }`.trim(),
 
+'in:wipe:cinematic': `
+@keyframes wipe-cinematic-in {
+  0% {
+    clip-path: inset(100% 0 100% 0);
+  }
+  30%, 70% {
+    clip-path: inset(10% 0 10% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:cinematic"] {
+   animation-name: wipe-cinematic-in;
+}`.trim(),
+
+'out:wipe:cinematic': `
+@keyframes wipe-cinematic-out {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  30%, 70% {
+    clip-path: inset(10% 0 10% 0);
+  }
+  100% {
+    clip-path: inset(100% 0 100% 0);
+  }
+}
+
+[transition-style="out:wipe:cinematic"] {
+  animation-name: wipe-cinematic-out;
+}`.trim()
+
 }

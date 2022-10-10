@@ -45,6 +45,7 @@ export default {
       'in:wipe:top-left',
       'in:wipe:bottom-right',
       'in:wipe:bottom-left',
+      'in:wipe:cinematic',
     ],
     exits: [
       'out:wipe:right',
@@ -55,6 +56,7 @@ export default {
       'out:wipe:top-left',
       'out:wipe:bottom-right',
       'out:wipe:bottom-left',
+      'out:wipe:cinematic',
     ],
   },
   polygons: {
