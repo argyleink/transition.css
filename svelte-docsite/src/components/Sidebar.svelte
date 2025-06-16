@@ -326,8 +326,9 @@
     nav {
       flex-direction: column;
       max-block-size: 100vh;
-      overflow-y: auto;
+      overflow: hidden auto;
       overscroll-behavior-y: none;
+      scrollbar-color: var(--brand) #0000;
     }
 
     .mobile-only {
