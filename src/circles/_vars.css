@@ -1,7 +1,7 @@
 :root {
-  --circle-center-center-out: circle(0%);
-  --circle-center-center-in:  circle(125%);
-  --circle-hesitate:          circle(40%);
+  --circle-center-center-out: circle(0% at center);
+  --circle-center-center-in:  circle(125% at center);
+  --circle-hesitate:          circle(40% at center);
   
   --circle-top-left-out:      circle(0% at top left);
   --circle-top-right-out:     circle(0% at top right);
