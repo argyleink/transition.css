@@ -17,3 +17,6 @@
 @import "out-top-left.css";
 @import "out-bottom-right.css";
 @import "out-bottom-left.css";
+
+@import "out-cinematic.css";
+@import "in-cinematic.css";
